@@ -1,42 +1,11 @@
-import React , { useState , useEffect }from 'react'
+import React from 'react'
 import { Col, Row } from 'react-bootstrap';
+import { useShoppingCart } from '../context/shoppingCartContext';
 import StoreItem from '../storeItem';
 
 const Store = () => {
-  const [loading , setLoading] = useState<boolean>(false);
-  const [data , setData] = useState<{
-    id : number,
-    title : string,
-    category : string,
-    description : string,
-    image : string,
-    price : number
-  }[]>([]);
+  const {data , loading } = useShoppingCart();
 
-  useEffect(()=>{
-    let componentMounted = true;
-    const getProducts = async()=>{
-      setLoading(true);
-
-      const response = await fetch('https://fakestoreapi.com/products');
-   
-
-      if(componentMounted)
-      {
-        setLoading(false);
-        setData(await response.clone().json());
-        console.log(data);
-        console.log(loading);
-      }
-      return()=>{
-        componentMounted = false;
-      }
-    }
-    getProducts();
-    console.log(`i am ${componentMounted}`)
-  },[])
-  console.log(data);
-  console.log(loading);
   return (
     <>
       <h1>Store</h1>

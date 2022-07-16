@@ -1,6 +1,7 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, ReactNode, useContext, useState , useEffect } from "react";
 import { useLocalStorage }  from "../hooks/useLocalStorage";
 import ShoppingCart from "../shoppingCart";
+import { StoreItemProps } from "../storeItem";
 //type
 type ShoppingCartProviderProps={
     children :ReactNode
@@ -14,7 +15,11 @@ type ShoppingCartContextProps ={
     openCart : () => void,
     closeCart : ()=> void,
     cartQuantity : number,
-    cartItems : CartItem[]
+    cartItems : CartItem[],
+    data :StoreItemProps[],
+    setData : React.Dispatch<React.SetStateAction<StoreItemProps[]>>,
+    loading : boolean,
+    setLoading : React.Dispatch<React.SetStateAction<boolean>>
 }
 type CartItem ={
     id : number,
@@ -31,10 +36,31 @@ export function useShoppingCart(){
 
 //provider
 export function ShoppingCartProvider({children} : ShoppingCartProviderProps){
+    const [loading ,setLoading] = useState<boolean>(false);
+    const [data , setData] = useState<StoreItemProps[]>([]);
     const [cartItems , setCartItems] = useLocalStorage<CartItem[]>("shopping-cart" , []);
     const cartQuantity = cartItems.reduce((quantity , item) => item.quantity + quantity ,0);
     const [isOpen , setIsOpen] = useState(false);
+    useEffect(()=>{
+        let componentMounted = true;
+        const getProducts = async()=>{
+          setLoading(true);      
+          const response = await fetch('https://fakestoreapi.com/products');
+       
     
+          if(componentMounted)
+          {
+            setLoading(false);
+            setData(await response.clone().json());
+            console.log(data);
+          }
+          return()=>{
+            componentMounted = false;
+          }
+        }
+        getProducts();
+        console.log(`i am ${componentMounted}`)
+      },[])
     function getItemQuantity(id : number){
         console.log(cartItems.find(item => item.id === id)?.quantity || 0);
         return cartItems.find(item => item.id === id)?.quantity || 0;
@@ -98,7 +124,11 @@ export function ShoppingCartProvider({children} : ShoppingCartProviderProps){
                 cartItems , 
                 cartQuantity , 
                 openCart , 
-                closeCart
+                closeCart,
+                data,
+                setData,
+                loading,
+                setLoading
             }}>
                 {children}
                 <ShoppingCart isOpen = {isOpen}/>
