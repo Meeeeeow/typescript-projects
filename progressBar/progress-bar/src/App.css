@@ -1,0 +1,155 @@
+
+html , body{
+  display: flex;
+  height:100%;
+  justify-content: center;
+  align-items: center;
+}
+.skills-bar{
+  width:700px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+}
+.skills-bar .skills{
+  margin:25px 0;
+}
+.skills-bar .skills:first-child{
+  margin-top: 0px;
+}
+.skills-bar .skills .info{
+  margin:15px 0;
+  font-size: 18px;
+  font-weight: 500;
+  opacity:0;
+  animation:showName 0.5s 1s linear forwards;
+}
+@keyframes showName {
+    100%{
+      opacity: 1;
+    }
+}
+
+.skills-bar .skills .progress-bar{
+  position: relative;
+  background: #f0f0f0;
+  display:block;
+  height:10px;
+  width:100%;
+  border:1px solid rgba(0,0,0,0,0.3);
+  box-shadow: 0 0 10px #2187e7b3;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.8s cubic-bezier(1, 0, 0.5, 1) forwards;
+
+}
+.skills-bar .skills .progress-bar span{
+  height:100%;
+  background: #6665ee;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.8s 0.5s cubic-bezier(1, 0, 0.5, 1) forwards;
+} 
+.skills-bar .skills .progress-bar.js span{
+  width:85%;
+}
+.skills-bar .skills .progress-bar.python span{
+  width:90%;
+}
+.skills-bar .skills .progress-bar.c span{
+  width:80%;
+}
+.skills-bar .skills .progress-bar.react span{
+  width:75%;
+}
+.skills-bar .skills .progress-bar span::before{
+  position: absolute;
+  content:"";
+  top:-10px;
+  right:0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0;
+  border-right-width: 0;
+  border-top-color: #000;
+  opacity:0;
+  animation:showPoint 0.5s 1.3s linear forwards;
+}
+.skills-bar .skills .progress-bar span::after{
+  position: absolute;
+  content:"80%";
+  top:-30px;
+  right:0;
+  background: #000;
+  color: #fff;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 4px;
+  opacity:0;
+  animation:showPoint 0.5s 1.3s linear forwards;
+}
+@keyframes showPoint {
+    100%{
+      opacity: 1;
+    }
+}
+.skills-bar .skills .progress-bar.js span::after{
+  content:'85%';
+}
+.skills-bar .skills .progress-bar.python span::after{
+  content:'90%';
+}
+.skills-bar .skills .progress-bar.c span::after{
+  content:'80%';
+}
+.skills-bar .skills .progress-bar.react span::after{
+  content:'75%';
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
