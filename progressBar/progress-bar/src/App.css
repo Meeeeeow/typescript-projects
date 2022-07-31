@@ -86,8 +86,8 @@ html , body{
 .skills-bar .skills .progress-bar{
   position: relative;
   background: #f0f0f0;
-  display:block;
-  height:10px;
+  display:flex;
+  height:101px;
   width:100%;
   border:1px solid rgba(0,0,0,0,0.3);
   box-shadow: 0 0 10px #2187e7b3;
@@ -103,6 +103,8 @@ html , body{
   border-radius: 10px;
   transform: scaleX(0);
   transform-origin: left;
+  left:0;
+  top:-20px;
   animation: animate 0.8s 0.5s cubic-bezier(1, 0, 0.5, 1) forwards;
 } 
 .skills-bar .skills .progress-bar.js span{
@@ -127,7 +129,7 @@ html , body{
   border: 7px solid transparent;
   border-bottom-width: 0;
   border-right-width: 0;
-  border-top-color: #000;
+  border-top-color: rgb(129, 42, 42);
   opacity:0;
   animation:showPoint 0.5s 1.3s linear forwards;
 }
