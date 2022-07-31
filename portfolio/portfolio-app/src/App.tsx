@@ -12,7 +12,9 @@ function App() {
     <>
       <Navbars/>
       <Banner/>
+      
       <Container>
+        
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/skills" element={<Skills/>}/>

@@ -69,6 +69,22 @@ img{
   text-transform: capitalize;
   font-weight: 900;
   filter: brightness(13%);
+  text-shadow: 0 1px #808d93,
+       	              -1px 0 #cdd2d5,
+       	              -1px 2px #808d93,
+       	              -2px 1px #cdd2d5,
+       	              -2px 3px #808d93,
+       	              -3px 2px #cdd2d5,
+       	              -3px 4px #808d93,
+       	              -4px 3px #cdd2d5,
+       	              -4px 5px #808d93,
+       	              -5px 4px #cdd2d5,
+       	              -5px 6px #808d93,
+       	              -6px 5px #cdd2d5,
+       	              -6px 7px #808d93,
+       	              -7px 6px #cdd2d5,
+       	              -7px 8px #808d93,
+       	              -8px 7px #cdd2d5;
 }
 .title div{
   position: absolute;
@@ -81,6 +97,19 @@ img{
   text-transform: capitalize;
   font-size: 2.6rem;
   font-weight: 800;
+}
+button{
+  border:0;
+  background-color: transparent;
+}
+input:focus, textarea:focus, select:focus{
+  outline:none;
+}
+p.success{
+  color:green;
+}
+p.danger{
+  color:red;
 }
 /*** Navbar css ***/
 nav.navbar{
@@ -300,6 +329,330 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon{
 h1 > .wrap{
   border-right: 0.09em solid #666;
 }
+/*** skills css ***/
+.skill{
+  background: #151515;
+  border-radius: 65px;
+  padding: 60px 50px;
+  margin-top: -60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.skill p{
+  color: #b8b8b8;
+  font-size: 16px;
+  letter-spacing: 0.9px;
+  line-height: 1.5em;
+  margin: 15px 0 70px 0;
+}
+
+.skills-bar .skills{
+  margin:25px 0;
+}
+.skills-bar .skills:first-child{
+  margin-top: 0px;
+}
+.skills-bar .skills .info{
+  margin:15px 0;
+  font-size: 18px;
+  font-weight: 500;
+  opacity:0;
+  animation:showName 0.5s 2.6s linear forwards;
+}
+@keyframes showName {
+    100%{
+      opacity: 1;
+    }
+}
+
+.skills-bar .skills .progress-bar{
+  position: relative;
+  background: #f0f0f0;
+  display:block;
+  height:10px;
+  width:100%;
+  border:1px solid rgba(0,0,0,0,0.3);
+  border-radius: 12px;
+  box-shadow: 0 0 10px #2187e7b3;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.8s 3s cubic-bezier(1, 0, 0.5, 1) forwards;
+  overflow: visible;
+}
+.skills-bar .skills .progress-bar span{
+  height:100%;
+  background: #6665ee;
+  position: absolute;
+  border-radius: 10px;
+  left:0;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.8s 3.2s cubic-bezier(1, 0, 0.5, 1) forwards;
+} 
+.skills-bar .skills .progress-bar.js span{
+  width:85%;
+}
+.skills-bar .skills .progress-bar.python span{
+  width:90%;
+}
+.skills-bar .skills .progress-bar.c span{
+  width:80%;
+}
+.skills-bar .skills .progress-bar.react span{
+  width:75%;
+}
+.skills-bar .skills .progress-bar.ts span{
+  width:60%;
+}
+.skills-bar .skills .progress-bar.sql span{
+  width:80%;
+}
+.skills-bar .skills .progress-bar.nlp span{
+  width:70%;
+}
+.skills-bar .skills .progress-bar span::before{
+  position: absolute;
+  content:"";
+  top:-14px;
+  right:0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0;
+  border-right-width: 0;
+  border-top-color: #fff;
+  opacity:0;
+  animation:showPoint 0.5s 4s linear forwards;
+}
+.skills-bar .skills .progress-bar span::after{
+  position: absolute;
+  top:-35px;
+  right:0;
+  background: #fff;
+  color: #000;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 4px;
+  opacity:0;
+  animation:showPoint 0.5s 4s linear forwards;
+}
+@keyframes showPoint {
+    100%{
+      opacity: 1;
+    }
+}
+.skills-bar .skills .progress-bar.js span::after{
+  content:'85%';
+}
+.skills-bar .skills .progress-bar.python span::after{
+  content:'90%';
+}
+.skills-bar .skills .progress-bar.c span::after{
+  content:'80%';
+}
+.skills-bar .skills .progress-bar.react span::after{
+  content:'75%';
+}
+.skills-bar .skills .progress-bar.ts span::after{
+  content:'60%';
+}
+.skills-bar .skills .progress-bar.sql span::after{
+  content:'80%';
+}
+.skills-bar .skills .progress-bar.nlp span::after{
+  content:'70%';
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+
+/*** project css ***/
+.project{
+  padding:80px 0;
+  position: relative;
+  background-color: #000;
+}
+.project p{
+  color: #b8b8b8;
+  font-size: 16px;
+  letter-spacing: 0.9px;
+  line-height: 1.5em;
+  margin: 16px auto 32px auto;
+  text-align: center;
+  width: 60%;
+}
+.project .nav.nav-pills{
+  width:75%;
+  margin: 0 auto;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.1)  /*rgb(255 255 255 / 10%);*/;
+  overflow: hidden;
+}
+.project .nav.nav-pills .nav-item{
+  width:33.333%;
+}
+.project .nav.nav-pills .nav-link{
+  background-color: transparent;
+  border-radius: 0;
+  padding: 17px 0;
+  color:#fff;
+  width:100%;
+  font-size: 17px;
+  letter-spacing: 0.9px;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  z-index: 0;
+}
+.project .nav.nav-pills .nav-link::before{
+  content:"";
+  position: absolute;
+  width:0px;
+  height:100%;
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  top:0;
+  left:0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+.project .nav.nav-pills .nav-link.active::before{
+  width:100%;
+}
+.project .nav.nav-pills .nav-link.active{
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.proj-img{
+  position: relative;
+  border-radius: 30px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+.proj-img::before{
+  position: absolute;
+  content: "";
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  opacity: 0.8;
+  width: 100%;
+  height:0;
+  transition: 0.4s ease-in-out;
+  
+}
+.proj-img:hover::before{
+  height:100%;
+}
+.proj-txt{
+  position: absolute;
+  text-align: center;
+  top:75%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
+}
+.proj-img:hover .proj-txt{
+  top:50%;
+  opacity: 1;
+}
+.proj-txt h4{
+  font-size:30px;
+  font-weight:700;
+  letter-spacing: 0.9px;
+  line-height: 1.1em;
+}
+.proj-txt span{
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.7px;
+}
+.background-img{
+  top:-15%;
+  position: absolute;
+  bottom:0;
+  width:15%;
+  height: 100%;
+  right:0;
+  z-index:1;
+  opacity: 0.35;
+}
+/*** contact css ***/
+.contact{
+  background: linear-gradient(9090.21deg #aa367c -5.91%, #4a2fbd 111111.58%);
+  padding:60px 0 200px 0;
+}
+.contact img{
+  width:90%;
+}
+.contact .intro{
+  font-size:45px;
+  font-weight: 700px;
+  margin-bottom: 30px;
+}
+.contact form input, .contact form textarea{
+  width:100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 17px;
+  color:#fff;
+  margin:0 0 12px 0;
+  padding: 17px 25px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.9px;
+  transition: 0.3s ease-in-out;
+}
+.contact form input:focus , .contact form textarea:focus{
+  background: rgba(255, 255, 255, 1);
+  color:#121212;
+}
+.contact form input:focus::placeholder, .contact form textarea:focus::placeholder{
+  color:#121212;
+  opacity:0.75;
+}
+.contact form button{
+  font-weight: 600;
+  color:#000;
+  background-color: #fff;
+  padding:15px 50px;
+  font-size: 18px;
+  margin-top: 25px;
+  border-radius: 0;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.contact form button span{
+  z-index:0;
+  position: relative;
+}
+.contact form button:hover{
+  color:#fff;
+}
+.contact form button::before{
+  content:"";
+  background: #121212;
+  width:0%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+  border:1px solid #fff;
+}
+.contact form button:hover::before{
+  width:100%;
+  box-shadow:  0 0 5px #fff,
+  0 0 10px #fff,
+  0 0 20px #0ff;
+}
+/*
 .App {
   text-align: center;
 }
@@ -338,3 +691,4 @@ h1 > .wrap{
     transform: rotate(360deg);
   }
 }
+*/
