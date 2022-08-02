@@ -358,7 +358,7 @@ h1 > .wrap{
   font-size: 18px;
   font-weight: 500;
   opacity:0;
-  animation:showName 0.5s 2.6s linear forwards;
+  animation:showName 0.5s 0.3s  linear forwards;
 }
 @keyframes showName {
     100%{
@@ -377,7 +377,7 @@ h1 > .wrap{
   box-shadow: 0 0 10px #2187e7b3;
   transform: scaleX(0);
   transform-origin: left;
-  animation: animate 0.8s 3s cubic-bezier(1, 0, 0.5, 1) forwards;
+  animation: animate 0.8s 0.5s cubic-bezier(1, 0, 0.5, 1) forwards;
   overflow: visible;
 }
 .skills-bar .skills .progress-bar span{
@@ -388,7 +388,7 @@ h1 > .wrap{
   left:0;
   transform: scaleX(0);
   transform-origin: left;
-  animation: animate 0.8s 3.2s cubic-bezier(1, 0, 0.5, 1) forwards;
+  animation: animate 0.8s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 } 
 .skills-bar .skills .progress-bar.js span{
   width:85%;
@@ -423,7 +423,7 @@ h1 > .wrap{
   border-right-width: 0;
   border-top-color: #fff;
   opacity:0;
-  animation:showPoint 0.5s 4s linear forwards;
+  animation:showPoint 0.5s 1.4s linear forwards;
 }
 .skills-bar .skills .progress-bar span::after{
   position: absolute;
@@ -436,7 +436,7 @@ h1 > .wrap{
   font-weight: 500;
   border-radius: 4px;
   opacity:0;
-  animation:showPoint 0.5s 4s linear forwards;
+  animation:showPoint 0.5s 1.4s linear forwards;
 }
 @keyframes showPoint {
     100%{
@@ -651,6 +651,24 @@ h1 > .wrap{
   box-shadow:  0 0 5px #fff,
   0 0 10px #fff,
   0 0 20px #0ff;
+}
+/*** footer css ***/
+.footer{
+  padding: 50px 0 50px 0;
+  background-image: url('./assets/img/footer-bg.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footer img{
+  width:30%;
+}
+.footer p{
+  font-weight: 400;
+  font-size: 15px;
+  color:#b8b8b8;
+  letter-spacing: 0.5px;
+  margin-top: 25px;
 }
 /*
 .App {

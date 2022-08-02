@@ -7,6 +7,7 @@ import Skills from './components/skills';
 import Projects from './components/projects';
 import { Container } from 'react-bootstrap';
 import Banner from './components/banner';
+import Footer from './components/footer';
 function App() {
   return (
     <>
@@ -21,6 +22,7 @@ function App() {
           <Route path="/projects" element={<Projects/>}/>
         </Routes>
       </Container>
+      <Footer/>
     </>
   );
 }

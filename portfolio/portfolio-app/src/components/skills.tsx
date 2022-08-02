@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-
+import TrackVisibility from 'react-on-screen';
 const Skills = () => {
   return (
     <section className='skill'>
@@ -18,50 +18,55 @@ const Skills = () => {
         </Row>
         <Row>
           <Col>
-          <div className='skills-bar'>
-            <div className='skills'>
-                <div className="info">
-                    Python
-                </div>
-                <div className="progress-bar python">
-                    <span></span>
-                </div>
-            </div>
-            <div className='skills'>
-                <div className="info">
-                    C++
-                </div>
-                <div className="progress-bar c">
-                    <span></span>
-                </div>
-            </div>
-            <div className='skills'>
-                <div className="info">
-                    Javascript
-                </div>
-                <div className="progress-bar js">
-                    <span></span>
-                </div>
-            </div>
-            <div className='skills'>
-                <div className="info">
-                    React
-                </div>
-                <div className="progress-bar react">
-                    <span></span>
-                </div>
-            </div>
-            
-            
-            <div className='skills'>
-                <div className="info">
-                    {<span>Machine learning & Nlp</span>}
-                </div>
-                <div className="progress-bar nlp">
-                    <span></span>
-                </div>
-            </div>
-            </div>
+          <TrackVisibility>
+            {({ isVisible}) =>
+                 <div className='skills-bar'>
+                 <div className={isVisible ? 'skills' : ""}>
+                     <div className={isVisible ? "info" : ""}>
+                         Python
+                     </div>
+                     <div className={isVisible ? "progress-bar python" : ""}>
+                         <span></span>
+                     </div>
+                 </div>
+                 <div className={isVisible ? 'skills' : ""}>
+                     <div className={isVisible ? "info" : ""}>
+                         C++
+                     </div>
+                     <div className={isVisible ? "progress-bar c" : ""}>
+                         <span></span>
+                     </div>
+                 </div>
+                 <div className={isVisible ? 'skills' : ""}>
+                     <div className={isVisible ? "info" : ""}>
+                         Javascript
+                     </div>
+                     <div className={isVisible ? "progress-bar js": ""}>
+                         <span></span>
+                     </div>
+                 </div>
+                 <div className={isVisible ? 'skills' : ""}>
+                     <div className={isVisible ? "info" : ""}>
+                         React
+                     </div>
+                     <div className={isVisible ? "progress-bar react" : ""}>
+                         <span></span>
+                     </div>
+                 </div>
+                 
+                 
+                 <div className={isVisible ? 'skills' : ""}>
+                     <div className={isVisible ? "info" : ""}>
+                         {<span>Machine learning & Nlp</span>}
+                     </div>
+                     <div className={isVisible ? "progress-bar nlp" : ""}>
+                         <span></span>
+                     </div>
+                 </div>
+               </div>
+            }
+          </TrackVisibility>
+         
           </Col>
         </Row>
       </Container>
