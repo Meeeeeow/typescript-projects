@@ -1,6 +1,10 @@
-import React , {useState} from 'react'
+import React , {useState , useRef} from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import contactImg from '../assets/img/contact-img.svg';
+import emailjs from '@emailjs/browser';
+import {toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 type formInitialProps = {
     firstName : string,
     lastName : string,
@@ -13,6 +17,31 @@ type stateProps = {
     success : boolean
 }
 const Contact = () => {
+  const form = useRef<any>(); 
+  const sendEmail = (e:any) => {
+    e.preventDefault();
+    setSubmitButton('Sending...');
+    emailjs.sendForm('service_1r6kk4l', 'template_i3iej28', form.current, '7QbqJ239XcCWI6H-4')
+      .then((result) => {
+          console.log(result.text);
+          e.target.reset();
+          setStatus({success:true , message : 'Message  sent successfully'});
+          toast.success('Message sent successfully',{
+            position:toast.POSITION.TOP_RIGHT,
+            autoClose: 2000
+          });
+          setSubmitButton("Send");
+
+      }, (error) => {
+          console.log(error.text);
+          setStatus({success:false , message : 'There was an error sending your message'});
+          toast.error('There was an error sending your message',{
+            position:toast.POSITION.TOP_RIGHT,
+            autoClose: 2000
+          });
+          setSubmitButton("Send");
+      });
+  }; 
   const [formDetails , setFormDetails] = useState<formInitialProps>(
     {
         firstName : '',
@@ -34,31 +63,6 @@ const Contact = () => {
         [category] : value
     });
   }
-  const handleSubmit = async (e:any) =>{
-    e.preventDefault();
-    setSubmitButton('Sending...');
-    let response = await fetch("http://localhost:5000/contact",{
-        method: "POST",
-        headers:{
-            "Content-Type" : "Application/json;character=utf-8",
-        },
-        body: JSON.stringify(formDetails)
-    });
-    setSubmitButton("Send");
-    let result = await response.json();
-    setFormDetails({
-        firstName: '',
-        lastName : '',
-        email:'',
-        phone:'',
-        message:''
-    });
-    if(result.code === 200){
-        setStatus({success:true , message : 'Message  sent successfully'});
-    }else{
-        setStatus({success:true , message : 'Message  sent successfully'});
-    }
-  }
   return (
     <section className="contact">
         <Container>
@@ -75,18 +79,19 @@ const Contact = () => {
                 </Col>
                 <Col md={6}>
                     <h2 className='intro'>Say hello!</h2>
-                    <form onSubmit={handleSubmit}>
+                    <form ref = {form} onSubmit={sendEmail}>
+                        <ToastContainer/>
                         <Row>
                             <Col sm={6} className="px-1">
-                                <input type="text" value={formDetails.firstName} placeholder="Enter your first name"
+                                <input type="text" value={formDetails.firstName} name = "user_first_name" placeholder="Enter your first name"
                                 onChange={(e)=>{onFormUpdate('firstName', e.target.value)}}/>
                             </Col>
                             <Col sm={6} className='px-1'>
-                                <input type="text" value={formDetails.lastName} placeholder="Enter your last name"
+                                <input type="text" value={formDetails.lastName} name= "user_last_name" placeholder="Enter your last name"
                                     onChange={(e)=>{onFormUpdate('lastName', e.target.value)}}/>
                             </Col>
                             <Col sm={6} className='px-1'>
-                                <input type="email" value={formDetails.email} placeholder="Enter your email address"
+                                <input type="email" value={formDetails.email} name="user_email" placeholder="Enter your email address"
                                     onChange={(e)=>{onFormUpdate('email', e.target.value)}}/>
                             </Col>
                             <Col sm={6} className='px-1'>
@@ -94,14 +99,10 @@ const Contact = () => {
                                     onChange={(e)=>{onFormUpdate('phone', e.target.value)}}/>
                             </Col>
                             <Col className='px-1'>
-                                <textarea rows={6} value={formDetails.message} placeholder="Enter your message"  onChange={(e)=>{onFormUpdate('message', e.target.value)}}></textarea>
+                                <textarea rows={6} value={formDetails.message} name="message" placeholder="Enter your message"  onChange={(e)=>{onFormUpdate('message', e.target.value)}}></textarea>
                                 <button type="submit"><span>{submitButton}</span></button>
                             </Col>
-                            {
-                                status.message && (
-                                    <p className={status.success === false ? 'danger' : 'success'}>{status.message}</p>
-                                )
-                            }
+                            
                         </Row>
                     </form>
                 </Col>

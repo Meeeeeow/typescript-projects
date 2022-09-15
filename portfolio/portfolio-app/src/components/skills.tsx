@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+
 import TrackVisibility from 'react-on-screen';
 const Skills = () => {
   return (
@@ -19,6 +20,7 @@ const Skills = () => {
         <Row>
           <Col>
           <TrackVisibility>
+          
             {({ isVisible}) =>
                  <div className='skills-bar'>
                  <div className={isVisible ? 'skills' : ""}>
