@@ -1,5 +1,6 @@
 import React,{useState , useEffect} from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap';
+import { HashLink } from 'react-router-hash-link';
 import {ArrowRightCircle} from 'react-bootstrap-icons';
 import mainBanner from '../assets/img/header-img.svg';
 import 'animate.css';
@@ -52,7 +53,10 @@ const Banner = () => {
                             <span className='start-tag'>Welcome to my Portfolio</span>
                             <h1>Hi!I'm Nazmus Sakib. A <span className='wrap'>{text}</span></h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quidem id culpa itaque quam laborum nobis illo magni praesentium, officiis repellat exercitationem distinctio eaque eum quae aut inventore voluptatem. Iusto!</p>
-                            <Button className='again-connect' onClick={()=>console.log('connect')}>Let's connect <ArrowRightCircle/></Button>
+                            <HashLink to="#contacts">
+                                <Button className='again-connect' onClick={()=>console.log('connect')}>Let's connect <ArrowRightCircle/></Button>
+                            </HashLink>
+                            
                         </div>} 
                     </TrackVisibility>
                 </Col>
