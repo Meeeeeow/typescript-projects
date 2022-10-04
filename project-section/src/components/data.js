@@ -18,5 +18,67 @@ export const ProjectsDetails = [
         description: "Keep notes of your daily tasks and delete them when done. This app is built using React and Typescript. It uses local storage to store the notes.",
         website:"https://superb-rabanadas-2418ad.netlify.app/",
         github:"https://github.com/Meeeeeow/typescript-projects/tree/master/notes-app/notes"
+    },
+    {
+        id: 2,
+        title: "Keep a Note",
+        category:'ts',
+        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
+        skills: ['Javascript','React', 'Typecript', 'React-Bootstrap'],
+        description: "Keep notes of your daily tasks and delete them when done. This app is built using React and Typescript. It uses local storage to store the notes.",
+        website:"https://superb-rabanadas-2418ad.netlify.app/",
+        github:"https://github.com/Meeeeeow/typescript-projects/tree/master/notes-app/notes"
+    },
+    {
+        id: 2,
+        title: "Keep a Note",
+        category:'ts',
+        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
+        skills: ['Javascript','React', 'Typecript', 'React-Bootstrap'],
+        description: "Keep notes of your daily tasks and delete them when done. This app is built using React and Typescript. It uses local storage to store the notes.",
+        website:"https://superb-rabanadas-2418ad.netlify.app/",
+        github:"https://github.com/Meeeeeow/typescript-projects/tree/master/notes-app/notes"
+    },
+
+    {
+        id: 2,
+        title: "Keep a Note",
+        category:'ts',
+        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
+        skills: ['Javascript','React', 'Typecript', 'React-Bootstrap'],
+        description: "Keep notes of your daily tasks and delete them when done. This app is built using React and Typescript. It uses local storage to store the notes.",
+        website:"https://superb-rabanadas-2418ad.netlify.app/",
+        github:"https://github.com/Meeeeeow/typescript-projects/tree/master/notes-app/notes"
+    },
+
+    {
+        id: 2,
+        title: "Keep a Note",
+        category:'ts',
+        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
+        skills: ['Javascript','React', 'Typecript', 'React-Bootstrap'],
+        description: "Keep notes of your daily tasks and delete them when done. This app is built using React and Typescript. It uses local storage to store the notes.",
+        website:"https://superb-rabanadas-2418ad.netlify.app/",
+        github:"https://github.com/Meeeeeow/typescript-projects/tree/master/notes-app/notes"
+    },
+    {
+        id: 2,
+        title: "Keep a Note",
+        category:'ts',
+        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
+        skills: ['Javascript','React', 'Typecript', 'React-Bootstrap'],
+        description: "Keep notes of your daily tasks and delete them when done. This app is built using React and Typescript. It uses local storage to store the notes.",
+        website:"https://superb-rabanadas-2418ad.netlify.app/",
+        github:"https://github.com/Meeeeeow/typescript-projects/tree/master/notes-app/notes"
+    },
+    {
+        id: 2,
+        title: "Keep a Note",
+        category:'ts',
+        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
+        skills: ['Javascript','React', 'Typecript', 'React-Bootstrap'],
+        description: "Keep notes of your daily tasks and delete them when done. This app is built using React and Typescript. It uses local storage to store the notes.",
+        website:"https://superb-rabanadas-2418ad.netlify.app/",
+        github:"https://github.com/Meeeeeow/typescript-projects/tree/master/notes-app/notes"
     }
 ]

@@ -1,7 +1,8 @@
 import { Container } from '@mui/material';
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import { ProjectsDetails } from './data';
 import ProjectCard from './projectCard';
+import {motion} from 'framer-motion';
 type projectSingle ={
   id: number,
   title: string,
@@ -15,18 +16,32 @@ type projectSingle ={
 const Projects = () => {
     const [clicked,setClicked] = useState<string>('all');
     const [allProjects,setAllProjects] = useState<projectSingle[]>(ProjectsDetails);
+    const [filteredProjects,setFilteredProjects] = useState<projectSingle[]>(ProjectsDetails);
 
-    const takeCategory = (category:string) => {
-      setClicked(category);
-      if(category === 'all'){
-        setAllProjects(ProjectsDetails);
+    console.log(allProjects);
+
+    useEffect(()=>{
+      if(clicked === 'all'){
+        setAllProjects(allProjects);
+        setFilteredProjects(allProjects);
         return;
       }else{
-        const newProjects = ProjectsDetails.filter(project => project.category === category);
-        setAllProjects(newProjects);
+        const filtered = allProjects.filter(project => project.category === clicked);
+        setFilteredProjects(filtered); 
       }
+    },[clicked,allProjects])
+    // const takeCategory = (category:string) => {
+    //   setClicked(category);
+    //   if(category === 'all'){
+    //     setAllProjects(ProjectsDetails);
+    //     setFilteredProjects(ProjectsDetails);
+    //     return;
+    //   }else{
+    //     const newProjects = ProjectsDetails.filter(project => project.category === category);
+    //     setFilteredProjects(newProjects);
+    //   }
       
-    }
+    // }
   return (
     <Container maxWidth="xl">
         <div id='projects'> 
@@ -36,23 +51,23 @@ const Projects = () => {
         </div>
 
         <ul className="project-filter">
-            <li className={`list ${clicked === 'all' ? "project-filter-active" : ""}`} onClick={()=> takeCategory('all')}>All</li>
-            <li className={`list ${clicked === 'asp' ? "project-filter-active" : ""}`} onClick={()=> takeCategory('asp')}>ASP.NET</li>
-            <li className={`list ${clicked === 'python' ? "project-filter-active" : ""}`} onClick={()=>takeCategory('python')}>Python</li>
-            <li className={`list ${clicked === 'web' ? "project-filter-active" : ""}`} onClick={()=>takeCategory('web')}>HTML,CSS,JS</li>
-            <li className={`list ${clicked === 'react' ? "project-filter-active" : ""}`} onClick={()=>takeCategory('react')}>ReactJS</li>
-            <li className={`list ${clicked === 'ts' ? "project-filter-active" : ""}`} onClick={()=> takeCategory('ts')}>Typescript</li>
-            <li className={`list ${clicked === 'ps' ? "project-filter-active" : ""}`} onClick={()=>takeCategory('ps')}>Photoshop</li>
+            <li className={`list ${clicked === 'all' ? "project-filter-active" : ""}`} onClick={()=>  setClicked('all')}>All</li>
+            <li className={`list ${clicked === 'asp' ? "project-filter-active" : ""}`} onClick={()=>  setClicked('asp')}>ASP.NET</li>
+            <li className={`list ${clicked === 'python' ? "project-filter-active" : ""}`} onClick={()=> setClicked('python')}>Python</li>
+            <li className={`list ${clicked === 'web' ? "project-filter-active" : ""}`} onClick={()=> setClicked('web')}>HTML,CSS,JS</li>
+            <li className={`list ${clicked === 'react' ? "project-filter-active" : ""}`} onClick={()=> setClicked('react')}>ReactJS</li>
+            <li className={`list ${clicked === 'ts' ? "project-filter-active" : ""}`} onClick={()=>  setClicked('ts')}>Typescript</li>
+            <li className={`list ${clicked === 'ps' ? "project-filter-active" : ""}`} onClick={()=> setClicked('ps')}>Photoshop</li>
         </ul>
-        <div className = 'projects'>
+        <motion.div layout transition={{duration:1}} initial={{ opacity: 0 }} animate ={{ opacity:1 }} className = 'projects'>
         {
-            allProjects.map((project : projectSingle ,index : number) => (
+            filteredProjects.map((project : projectSingle ,index : number) => (
                 <div className="project-card" key={index}>
                     <ProjectCard project={project} clicked={clicked}/>
                 </div> 
             ))
         }
-        </div>
+        </motion.div>
         </div>
     </Container>
   )
