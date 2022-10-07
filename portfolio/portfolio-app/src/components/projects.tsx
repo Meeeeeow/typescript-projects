@@ -1,32 +1,53 @@
-import React from 'react'
-import { Col, Container, Nav, Row, Tab } from 'react-bootstrap';
-import projImg1 from '../assets/img/project-img1.png';
-import projImg2 from '../assets/img/project-img2.png';
-import projImg3 from '../assets/img/project-img3.png';
+import { Col, Row } from 'react-bootstrap';
+import { Container } from '@mui/material';
+import React,{useState, useEffect} from 'react'
+import { ProjectsDetails } from './data';
+import {motion} from 'framer-motion';
 import colorSharp from '../assets/img/color-sharp2.png';
 import ProjectCard from './projectCard';
-const Projects = () => {
-  const projects=[
-    {
-      title:"Business Startup",
-      description: "Design & Development",
-      imgUrl : projImg1
-    },
-    {
-      title:"Business Startup",
-      description: "Design & Development",
-      imgUrl : projImg2
-    },
-    {
-      title:"Business Startup",
-      description: "Design & Development",
-      imgUrl : projImg3
-    },
 
-  ]
+type projectSingle ={
+  id: number,
+  title: string,
+  category: string,
+  image: string,
+  skills: string[],
+  description: string,
+  website: string,
+  github: string
+}
+const Projects = () => {
+  const [clicked,setClicked] = useState<string>('all');
+    const [allProjects,setAllProjects] = useState<projectSingle[]>(ProjectsDetails);
+    const [filteredProjects,setFilteredProjects] = useState<projectSingle[]>(ProjectsDetails);
+
+    console.log(allProjects);
+
+    useEffect(()=>{
+      if(clicked === 'all'){
+        setAllProjects(allProjects);
+        setFilteredProjects(allProjects);
+        return;
+      }else{
+        const filtered = allProjects.filter(project => project.category === clicked);
+        setFilteredProjects(filtered); 
+      }
+    },[clicked,allProjects])
+    // const takeCategory = (category:string) => {
+    //   setClicked(category);
+    //   if(category === 'all'){
+    //     setAllProjects(ProjectsDetails);
+    //     setFilteredProjects(ProjectsDetails);
+    //     return;
+    //   }else{
+    //     const newProjects = ProjectsDetails.filter(project => project.category === category);
+    //     setFilteredProjects(newProjects);
+    //   }
+      
+    // }
   return (
     <section className='project' id='projects'>
-      <Container>
+      <Container className='mainContainer' maxWidth='xl'>
         <Row>
           <Col>
           <div className="title">
@@ -40,41 +61,28 @@ const Projects = () => {
         </Row>
         <Row>
           <Col>
-          <Tab.Container id="project-tabs" defaultActiveKey="first">
-            <Nav variant="tabs" className='nav-pills mb-5 jusify-content-center align-items-center'>
-                <Nav.Item>
-                  <Nav.Link eventKey="first" id="tab-first">Tab 1</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="second" id="tab-second">Tab 2</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="third" id="tab-third">
-                    Tab 3
-                  </Nav.Link>
-                </Nav.Item>
-              </Nav>
-              <Tab.Content>
-                <Tab.Pane eventKey="first">
-                    <Row>
-                      {
-                        projects.map((project , index)=>{
-                          return(
-                            <ProjectCard {...project} key={Math.random()}></ProjectCard>
-                          )
-                        })
-                      }
-                    </Row>
-                </Tab.Pane>
-                <Tab.Pane eventKey="second">
-
-                </Tab.Pane>
-                <Tab.Pane eventKey="third">
-
-                </Tab.Pane>
-              </Tab.Content>
-          </Tab.Container>
-            
+            <Container maxWidth="xl" style={{overflow: 'visible'}} className='subcontainer'>
+                <div id='projects' > 
+                    <ul className="project-filter">
+                        <li className={`list ${clicked === 'all' ? "project-filter-active" : ""}`} onClick={()=>  setClicked('all')}>All</li>
+                        <li className={`list ${clicked === 'asp' ? "project-filter-active" : ""}`} onClick={()=>  setClicked('asp')}>ASP.NET</li>
+                        <li className={`list ${clicked === 'python' ? "project-filter-active" : ""}`} onClick={()=> setClicked('python')}>Python</li>
+                        <li className={`list ${clicked === 'web' ? "project-filter-active" : ""}`} onClick={()=> setClicked('web')}>HTML,CSS,JS</li>
+                        <li className={`list ${clicked === 'react' ? "project-filter-active" : ""}`} onClick={()=> setClicked('react')}>ReactJS</li>
+                        <li className={`list ${clicked === 'ts' ? "project-filter-active" : ""}`} onClick={()=>  setClicked('ts')}>Typescript</li>
+                        <li className={`list ${clicked === 'ps' ? "project-filter-active" : ""}`} onClick={()=> setClicked('ps')}>Photoshop</li>
+                    </ul>
+                    <motion.div layout transition={{duration:0.6}} initial={{ opacity: 0 }} animate ={{ opacity:1 }} className = 'project-cards'>
+                    {
+                        filteredProjects.map((project : projectSingle ,index : number) => (
+                            <div className="project-card" key={index}>
+                                <ProjectCard project={project} clicked={clicked}/>
+                            </div> 
+                        ))
+                    }
+                    </motion.div>
+                </div>
+          </Container>
           </Col>
         </Row>
       </Container>
