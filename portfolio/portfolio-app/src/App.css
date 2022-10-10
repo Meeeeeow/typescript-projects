@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@400;700&family=Press+Start+2P&family=Source+Code+Pro:ital,wght@0,400;1,700&display=swap');
 @font-face {
   font-family: Centra;
   src: url('./assets/font/CentraNo2-Bold.ttf');
@@ -140,6 +141,20 @@ p.success{
 p.danger{
   color:red;
 }
+
+/***home***/
+.home-section{
+  animation: animateHome ease 6s;
+}
+@keyframes animateHome{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+
 /*** Navbar css ***/
 nav.navbar{
   padding: 20px 0;
@@ -149,7 +164,12 @@ nav.navbar{
   z-index: 9999;
   transition: 0.32 ease-in-out;
 }
-
+nav.navbar .logo{
+  color:rgb(243, 233, 233);
+  font-family: 'M PLUS 1 Code', sans-serif;
+  font-weight: 900;
+  font-size: 1.7rem;
+}
 nav.navbar.scrolled{
   padding:0px 0;
   background-color: #121212;
@@ -159,12 +179,14 @@ nav.navbar span a.nav-link{
 }
 
 nav.navbar .navbar-nav a.nav-link{
-  font-weight:400;
-  color:#fff !important;
-  letter-spacing: 0.8px;
-  padding:0 25px;
-  font-size: 20px;
-  opacity: 0.75;
+  font-weight:500;
+  color:rgb(243, 233, 233) !important;
+  font-family: 'M PLUS 1 Code', sans-serif;
+  letter-spacing: 1.2px;
+  padding:0 18px;
+  font-size: 1.1rem;
+  opacity: 0.6;
+  margin-left: 14%;
 }
 nav.navbar .navbar-nav a.nav-link:hover,
 nav.navbar .navbar-nav a.nav-link.active{
@@ -213,13 +235,14 @@ span.navbar-text{
 
 .navbar-text .connect{
   font-weight:700;
-  color:#fff;
+  color:rgb(243, 233, 233);
   border:1px solid #fff;
   padding: 18px 34px;
   font-size: 20px;
   margin-left: 18px;
   position: relative;
   background-color: transparent;
+  font-family: 'M PLUS 1 Code', sans-serif;
 }
 .navbar-text .connect span{
   z-index: 1;
@@ -307,6 +330,26 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon{
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;
+  font-family: 'Source Code Pro', monospace;
+}
+.banner .about-me-content {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.33rem;
+  color: #b8b8b8; 
+}
+.banner .about-me-content span{
+  opacity: 0.23;
+  display:block;
+}
+.banner .about-me-content .vertical{
+  border-left: 2px solid #b8b8b8;
+  height:100px;
+  margin-top:2.2%;
+  margin-left: 3.5%;
+  opacity: 0.23;
+}
+.banner .about-me-content .content{
+  display: flex;
 }
 .banner h1{
   font-size: 70px;
@@ -315,24 +358,49 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon{
   line-height: 1.3;
   margin-bottom: 20px;
   display: block;
+  font-family: 'Source Code Pro', monospace;
 }
 .banner p{
   color: #b8b8b8;
-  font-size: 20px;
+  font-size: 1.04rem;
   letter-spacing: 0.8px;
   line-height: 1.5em;
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
   width:90%;
+  opacity:0.72;
+}
+.banner .header-btns{
+  display:flex;
+  flex-wrap: wrap;
+
 }
 .banner .again-connect{
   color:#fff;
   font-weight: 700;
   font-size: 20px;
-  margin-top: 60px;
+  margin-top: 50px;
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
   border:1px solid rgb(194, 171, 247);
   background-color: transparent;
+  margin-right: 30px;
+}
+.banner .cv{
+  color:#fff;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 50px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+}
+.banner .cv svg{
+  font-size: 25px;
+  margin-left: 10px;
+  line-height: 1;
 }
 .banner .again-connect svg{
   font-size: 25px;
@@ -359,6 +427,54 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon{
 }
 h1 > .wrap{
   border-right: 0.09em solid #666;
+}
+/***scroll btn***/
+.scroll-btn{
+  position: relative;
+  margin-left:auto;
+  transform: translate(-15%,-65%);
+  width:2.7em;
+  height:4em;
+  border:0.3em solid #e0ecec;
+  border-radius: 2em;
+ 
+}
+
+.scroll-btn.btn-1 .ball-scroll{
+  position: absolute;
+  width:0.6em;
+  height:1.4em;
+  top: 0.5em;
+  left: 50%;
+  transform: translate(-50%,0);
+  border:0.1em solid #e0ecec;
+  border-radius: 1.5em;
+  overflow: hidden;
+}
+.scroll-btn.btn-1 .ball-scroll::before{
+  content:'';
+  position: absolute;
+  left: 0;
+  top: -100%;
+  right:0;
+  bottom: 0;
+  background-image: linear-gradient(0deg,#d1c9c9 1.7px, transparent 0.8px);
+  background-size: 100% 6px;
+  opacity:0.45;
+  animation: scrollAnimation 1s ease-in-out infinite;
+}
+@keyframes scrollAnimation{
+  0%{
+    transform: translateY(0);
+    opacity: 0.45;
+  }
+  40%,50%{
+    opacity: 0.75;
+  }
+  90%,100%{
+    transform: translateY(50%);
+    opacity: 0.45;
+  }
 }
 /*** skills css ***/
 .skill{
@@ -436,7 +552,7 @@ h1 > .wrap{
   transform-origin: left;
   overflow: visible;
 }
-.skills-bar .skills .progress-bar span{
+.skills-bar .skills .progress-bar .weight{
   height:100%;
   background: #6665ee;
   position: absolute;
@@ -446,28 +562,28 @@ h1 > .wrap{
   transform-origin: left;
   animation: animate 1.4s 0.6s cubic-bezier(1, 0, 0.5, 1)  forwards; /*animation name animation duration animation delay animation timing function animation iteration count animation direction animation fill mode animation play state*/
 } 
-.skills-bar .skills .progress-bar.js span{
+.skills-bar .skills .progress-bar.js .weight{
   width:85%;
 }
-.skills-bar .skills .progress-bar.python span{
+.skills-bar .skills .progress-bar.python .weight{
   width:80%;
 }
-.skills-bar .skills .progress-bar.c span{
+.skills-bar .skills .progress-bar.c .weight{
   width:80%;
 }
-.skills-bar .skills .progress-bar.react span{
+.skills-bar .skills .progress-bar.react .weight{
   width:85%;
 }
-.skills-bar .skills .progress-bar.ts span{
+.skills-bar .skills .progress-bar.ts .weight{
   width:65%;
 }
-.skills-bar .skills .progress-bar.sql span{
+.skills-bar .skills .progress-bar.sql .weight{
   width:70%;
 }
-.skills-bar .skills .progress-bar.nlp span{
+.skills-bar .skills .progress-bar.nlp .weight{
   width:75%;
 }
-.skills-bar .skills .progress-bar span::before{
+.skills-bar .skills .progress-bar .weight::before{
   position: absolute;
   content:"";
   top:-14px;
@@ -481,7 +597,7 @@ h1 > .wrap{
   opacity:0;
   animation:showPoint 0.5s 1.4s linear forwards;
 }
-.skills-bar .skills .progress-bar span::after{
+.skills-bar .skills .progress-bar .weight::after{
   position: absolute;
   top:-35px;
   right:0;
@@ -499,25 +615,25 @@ h1 > .wrap{
       opacity: 1;
     }
 }
-.skills-bar .skills .progress-bar.js span::after{
+.skills-bar .skills .progress-bar.js .weight::after{
   content:'85%';
 }
-.skills-bar .skills .progress-bar.python span::after{
+.skills-bar .skills .progress-bar.python .weight::after{
   content:'80%';
 }
-.skills-bar .skills .progress-bar.c span::after{
+.skills-bar .skills .progress-bar.c .weight::after{
   content:'80%';
 }
-.skills-bar .skills .progress-bar.react span::after{
+.skills-bar .skills .progress-bar.react .weight::after{
   content:'85%';
 }
-.skills-bar .skills .progress-bar.ts span::after{
+.skills-bar .skills .progress-bar.ts .weight::after{
   content:'65%';
 }
-.skills-bar .skills .progress-bar.sql span::after{
+.skills-bar .skills .progress-bar.sql .weight::after{
   content:'70%';
 }
-.skills-bar .skills .progress-bar.nlp span::after{
+.skills-bar .skills .progress-bar.nlp .weight::after{
   content:'75%';
 }
 @keyframes animate {
@@ -562,6 +678,7 @@ h1 > .wrap{
   1px 2px 4px 0px rgba(113, 24, 165, 0.75),
   2px 4px 8px 0px rgba(113, 24, 165, 0.75),
   2px 4px 16px 0px rgba(113, 24, 165, 0.75);
+  
 }
 .project-filter li{
   margin: 11px;
@@ -597,6 +714,8 @@ h1 > .wrap{
   overflow: scroll;
   overflow-x: hidden;
   scrollbar-width: none;
+  margin-left: 3%;
+  max-height: 52rem;
 }
 
 /*** contact css ***/

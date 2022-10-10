@@ -47,7 +47,7 @@ const Projects = () => {
     // }
   return (
     <section className='project' id='projects'>
-      <Container className='mainContainer' maxWidth='xl'>
+      <Container className='mainContainer' maxWidth='xl' >
         <Row>
           <Col>
           <div className="title">

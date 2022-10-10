@@ -28,7 +28,7 @@ const Skills = () => {
                          Python
                      </div>
                      <div className={isVisible ? "progress-bar python" : "progress-dsiplay-off-page"}>
-                         <span></span>
+                         <span className='weight'></span>
                      </div>
                  </div>
                  <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
@@ -36,7 +36,7 @@ const Skills = () => {
                          C++
                      </div>
                      <div className={isVisible ? "progress-bar c" : "progress-dsiplay-off-page"}>
-                         <span></span>
+                         <span className='weight'></span>
                      </div>
                  </div>
                  <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
@@ -44,7 +44,7 @@ const Skills = () => {
                          Javascript
                      </div>
                      <div className={isVisible ? "progress-bar js": "progress-dsiplay-off-page"}>
-                         <span></span>
+                         <span className='weight'></span>
                      </div>
                  </div>
                  <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
@@ -52,7 +52,7 @@ const Skills = () => {
                          React
                      </div>
                      <div className={isVisible ? "progress-bar react" : "progress-dsiplay-off-page"}>
-                         <span></span>
+                         <span className='weight'></span>
                      </div>
                  </div>
 
@@ -61,7 +61,7 @@ const Skills = () => {
                          Typescript
                      </div>
                      <div className={isVisible ? "progress-bar ts" : "progress-dsiplay-off-page"}>
-                         <span></span>
+                         <span className='weight'></span>
                      </div>
                  </div>
                  
@@ -70,7 +70,7 @@ const Skills = () => {
                          SQL
                      </div>
                      <div className={isVisible ? "progress-bar sql" : "progress-dsiplay-off-page"}>
-                         <span></span>
+                         <span className='weight'></span>
                      </div>
                  </div>
 
@@ -79,7 +79,7 @@ const Skills = () => {
                          {<span>Machine learning</span>}
                      </div>
                      <div className={isVisible ? "progress-bar nlp" : "progress-dsiplay-off-page"}>
-                         <span></span>
+                         <span className='weight'></span>
                      </div>
                  </div>
                </div>

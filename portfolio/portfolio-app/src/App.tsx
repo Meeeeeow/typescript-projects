@@ -1,22 +1,15 @@
 import React from 'react';
 import './App.css';
-import Navbars from './components/navbar';
-import Skills from './components/skills';
-import Projects from './components/projects';
-import Banner from './components/banner';
-import Footer from './components/footer';
-import Contact from './components/contact';
-import GotoTop from './components/gotoTop';
+import { Route, Routes  } from 'react-router-dom';
+import Loading from './components/loading';
+import Home from './components/home';
 function App() {
   return (
     <>
-      <Navbars/>
-      <Banner/>
-      <Skills/>
-      <Projects/>
-      <Contact/>
-      <GotoTop/>
-      <Footer/>
+        <Routes>
+          <Route path = '/' element = {<Loading/>}/>
+          <Route path='/home' element={<Home/>}/>
+        </Routes>
     </>
   );
 }

@@ -27,7 +27,7 @@ const Navbars = () => {
     <Navbar expand="md" className={scrolled ? 'scrolled' : ''}>
     <Container>
       <Navbar.Brand>
-        <Nav.Link href="/"><img src={logo} alt="logo"/></Nav.Link>
+        <Nav.Link href="/" className="logo">.Sakib()</Nav.Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" >
         <span className='navbar-toggler-icon'></span>
@@ -36,9 +36,9 @@ const Navbars = () => {
         <Nav
           className="me-auto"
         >
-          <Nav.Link href="#home" >Home</Nav.Link>
-          <Nav.Link href="#skills" >Skills</Nav.Link>
-          <Nav.Link href="#projects">Projects</Nav.Link>
+          <Nav.Link href="#home" >.home()</Nav.Link>
+          <Nav.Link href="#skills" >.skills()</Nav.Link>
+          <Nav.Link href="#projects">.projects()</Nav.Link>
         </Nav>
 
         {/* social media*/}
@@ -49,7 +49,7 @@ const Navbars = () => {
             <a href="#home"><img src={navLink3} alt=""/></a>
           </div>
           <HashLink to='#contacts'>
-          <Button className='connect' onClick={()=> console.log("Connected")}><span className='connect-text'>Let's Connect</span></Button>
+          <Button className='connect' onClick={()=> console.log("Connected")}><span className='connect-text'>.connect()</span></Button>
           </HashLink>
           
         </span>
