@@ -18,6 +18,7 @@
   margin:0;
   padding:0;
   box-sizing: border-box;
+  cursor:none;
 }
 html{
   scroll-behavior: smooth;
@@ -30,7 +31,7 @@ body{
   background-color: #121212 !important;
   color: #fff !important;
   font-family: 'Centra' , sans-serif !important;
-
+  
 }
 html{
   scrollbar-width: none;
@@ -142,6 +143,30 @@ p.danger{
   color:red;
 }
 
+/***cursor ***/
+.cursor-dot,
+.cursor-dot-outline{
+  pointer-events: none;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  opacity:1;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index:999;
+}
+
+.cursor-dot{
+  width:10px;
+  height:10px;
+  background-color: #dc5656;
+}
+.cursor-dot-outline{
+  width:40px;
+  height:40px;
+  background-color: rgba(229,128,128,0.5);
+}
 /***home***/
 .home-section{
   animation: animateHome ease 6s;
@@ -432,48 +457,67 @@ h1 > .wrap{
 .scroll-btn{
   position: relative;
   margin-left:auto;
-  transform: translate(-15%,-65%);
-  width:2.7em;
-  height:4em;
-  border:0.3em solid #e0ecec;
-  border-radius: 2em;
- 
+  width:50px;
+  height:50px;
+  
+  transform:rotate(45deg);
+}
+.scroll-btn span{
+  position: absolute;
+  top:0;
+  left: 0;
+  width:100%;
+  height:100%;
+  box-sizing: border-box;
+  display: block;
+  border : none;
+  border-right: 3px solid #fff;
+  border-bottom : 3px solid #fff;
+  animation: animateScroll 1s linear infinite;
 }
 
-.scroll-btn.btn-1 .ball-scroll{
-  position: absolute;
-  width:0.6em;
-  height:1.4em;
-  top: 0.5em;
-  left: 50%;
-  transform: translate(-50%,0);
-  border:0.1em solid #e0ecec;
-  border-radius: 1.5em;
-  overflow: hidden;
-}
-.scroll-btn.btn-1 .ball-scroll::before{
-  content:'';
-  position: absolute;
-  left: 0;
-  top: -100%;
-  right:0;
-  bottom: 0;
-  background-image: linear-gradient(0deg,#d1c9c9 1.7px, transparent 0.8px);
-  background-size: 100% 6px;
-  opacity:0.45;
-  animation: scrollAnimation 1s ease-in-out infinite;
-}
-@keyframes scrollAnimation{
+.scroll-btn span:nth-child(1)
+{
+  top:-30px;
+  left: -30px;
+  animation-delay: 0s;
+}  
+.scroll-btn span:nth-child(2)
+{
+  top:-15px;
+  left: -15px;
+  animation-delay: 0.2s;
+} 
+.scroll-btn span:nth-child(3)
+{
+  top:0px;
+  left: 0px;
+  animation-delay: 0.4s;
+} 
+.scroll-btn span:nth-child(4)
+{
+  top:15px;
+  left: 15px;
+  animation-delay: 0.6s;
+} 
+.scroll-btn span:nth-child(5)
+{
+  top: 30px;
+  left: 30px;
+  animation-delay: 0.8s;
+} 
+
+@keyframes animateScroll{
   0%{
-    transform: translateY(0);
-    opacity: 0.45;
+    border-color: #fff;
+    transform: translate(0,0);
   }
-  40%,50%{
-    opacity: 0.75;
+  20%{
+    border-color: #fff;
+    transform: translate(15px,15px);
   }
-  90%,100%{
-    transform: translateY(50%);
-    opacity: 0.45;
+  20.1%,100%{
+    border-color: #222;
   }
 }
 /*** skills css ***/
@@ -488,7 +532,34 @@ h1 > .wrap{
   display: flex;
   flex-direction: column;
 }
-
+.skills_header{
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+}
+.skills-icon{
+  font-size: 3rem;
+}
+.arrow-down{
+  font-size : 1.3rem;
+  margin-left: auto;
+  margin-top: 0.4rem;
+  transition: 0.5s;
+}
+.skills-title{
+  font-size: 2.3rem;
+}
+.skills-close .skills-list{
+  height:0;
+  overflow: hidden;
+}
+.skills-open .skills-list{
+  height: max-content;
+  margin-bottom: 3rem;
+}
+.skills-open .arrow-down{
+  transform: rotate(180deg);
+}
 .skill p{
   color: #b8b8b8;
   font-size: 16px;
@@ -497,6 +568,9 @@ h1 > .wrap{
   margin: 15px 0 70px 0;
 }
 
+.skills-bar{
+  margin-bottom:3.5rem;
+}
 .skills-bar .skills{
   margin:25px 0;
 }
@@ -683,7 +757,7 @@ h1 > .wrap{
 .project-filter li{
   margin: 11px;
   padding: 5px 20px;
-  color:#7dceca;
+  color:#4c7bb9;
   font-size: 0.9rem;
   letter-spacing: 0.3rem;
   font-weight: 400;
@@ -696,6 +770,7 @@ h1 > .wrap{
 }
 .project-card{
   margin: 20px;
+  box-shadow: 1px 1px 18px #ccc;
 }
 .background-img{
   position: absolute;
@@ -802,16 +877,25 @@ h1 > .wrap{
   box-shadow: 0 0 5px rgb(236, 29, 174);
   border-radius: 50%;
   position: fixed;
-  bottom:5rem;
+  bottom:100rem;
   right:5rem;
   z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  animation: gotoTop 1.2s linear infinite alternate-reverse;
+  visibility: hidden;
+  transition: 2s;
+  opacity:0;
 }
 
+.top-btn.active{
+  opacity:1;
+  bottom: 3rem;
+  visibility: visible;
+  animation: gotoTop 1.2s linear infinite alternate-reverse;
+  transition: 2s;
+}
 @keyframes gotoTop{
   0%{
     transform: translateY(-0.4rem);

@@ -20,13 +20,10 @@ const GotoTopBtn = () => {
     window.scrollTo({top:0, left:0, behavior: 'smooth'});
 }
   return ( 
-            <>
-                {showScroll && (
-                    <div className='top-btn' onClick={GotoTopBtn}>
-                        <HiArrowUp/>
-                    </div>
-                )}
-            </>
+
+                <div className={`top-btn ${showScroll ? 'active' : '' }`} onClick={GotoTopBtn}>
+                    <HiArrowUp/>
+                </div>
   )
 }
 export default GotoTop;

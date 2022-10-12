@@ -3,6 +3,7 @@ import './App.css';
 import { Route, Routes  } from 'react-router-dom';
 import Loading from './components/loading';
 import Home from './components/home';
+
 function App() {
   return (
     <>

@@ -81,10 +81,13 @@ const Banner = () => {
                             
                         </div>} 
                     </TrackVisibility>
-                    <div className="scroll-btn btn-1">
-                        <span className="ball-scroll">
-
-                        </span>
+                    <div className="scroll-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                       
                     </div>
                 </Col>
                 <Col xs={12} md={6} xl={5}>

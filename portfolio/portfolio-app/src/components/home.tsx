@@ -6,6 +6,7 @@ import Banner from './banner';
 import Footer from './footer';
 import Contact from './contact';
 import GotoTop from './gotoTop';
+import CursorApp from './cursor';
 function Home() {
 
   useEffect(()=>{
@@ -18,6 +19,7 @@ function Home() {
 
   return (
     <div className='home-section'>
+      <CursorApp/>
       <Navbars/>
       <Banner/>
       <Skills/>
