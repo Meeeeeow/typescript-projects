@@ -161,11 +161,13 @@ p.danger{
   width:10px;
   height:10px;
   background-color: #dc5656;
+  z-index:9999;
 }
 .cursor-dot-outline{
   width:40px;
   height:40px;
   background-color: rgba(229,128,128,0.5);
+  z-index:9999;
 }
 /***home***/
 .home-section{
@@ -182,7 +184,7 @@ p.danger{
 
 /*** Navbar css ***/
 nav.navbar{
-  padding: 20px 0;
+  padding: 30px 0;
   position: fixed;
   width: 100%;
   top:0;
@@ -196,11 +198,12 @@ nav.navbar .logo{
   font-size: 1.7rem;
 }
 nav.navbar.scrolled{
-  padding:0px 0;
+  padding:15px 0;
   background-color: #121212;
 }
 nav.navbar span a.nav-link{
   width:40%;
+  
 }
 
 nav.navbar .navbar-nav a.nav-link{
@@ -208,10 +211,11 @@ nav.navbar .navbar-nav a.nav-link{
   color:rgb(243, 233, 233) !important;
   font-family: 'M PLUS 1 Code', sans-serif;
   letter-spacing: 1.2px;
-  padding:0 18px;
+  padding:10px 18px;
   font-size: 1.1rem;
   opacity: 0.6;
-  margin-left: 14%;
+  margin: auto;
+  
 }
 nav.navbar .navbar-nav a.nav-link:hover,
 nav.navbar .navbar-nav a.nav-link.active{
@@ -292,50 +296,76 @@ span.navbar-text{
   height:100%;
   position: absolute;
 }
-nav.navbar .navbar-toggler:active,
-nav.navbar .navbar-toggler:focus {
+.navbar-toggler:active,
+.navbar-toggler:focus {
   outline:none;
   box-shadow: none;
 }
-nav.navbar .navbar-toggler-icon{
-  width:24px;
-  height:18px;
-  background-image: none;
+.navbar-toggler-icon{
+  right:0;
+  width:40px;
+  height:2px;
   position: relative;
-  border-bottom: 2px solid #fff;
   transition: all 300ms linear;
-  top: -2px;
+  background: #fff;
 }
-nav.navbar .navbar-toggler-icon:focus{
+.navbar-toggler-icon:focus{
   border-bottom: 2px solid #fff;
 }
-nav.navbar .navbar-toggler-icon:before,
-nav.navbar .navbar-toggler-icon:after {
-  width:24px;
+.navbar-toggler-icon::before,
+ .navbar-toggler-icon::after {
+ 
   position: absolute;
   height: 2px;
   background-color: #fff;
   top:0;
   left:0;
   content: "";
-  z-index: 1; /*changed*/
   transition: all 300ms linear;
 }
-nav.navbar .navbar-toggler-icon:after{
-  top:8px;
+.navbar-toggler-icon::before{
+  right:0;
+  width:33px;
+  transform: translateY(-8px);
 }
-nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after{
-  transform: rotate(45deg);
+.navbar-toggler-icon::after{
+  transform: translateY(8px);
+  width: 44px;
+
+}
+.navbar-toggler.open .navbar-toggler-icon{
+  transform: translate(-40px);
+  background: transparent;
+}
+.navbar-toggler.open .navbar-toggler-icon::after{
+  transform: rotate(-45deg) ;
   background-color: #fff;
   height:2px;
 }
-nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before{
-  transform: translateY(8px) rotate(-45deg);
+
+.navbar-toggler.open .navbar-toggler-icon::before{
+  transform: rotate(45deg) ;
+  width: 44px;
   background-color: #fff;
   height:2px;
 }
-nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon{
+ .navbar-toggler.open .navbar-toggler-icon{
   border-color: transparent;
+}
+@media screen and (min-width : 992px) and (max-width: 1200px) {
+  nav.navbar .navbar-nav{
+    background: transparent;
+    border-bottom: 2px solid rgba(20, 236, 218,0.34);
+  }
+  
+}
+@media  screen and (max-width:1200px) {
+  .navbar-text {
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1.2rem;
+  }
 }
 /*banner css*/
 .banner{
@@ -459,6 +489,7 @@ h1 > .wrap{
   margin-left:auto;
   width:50px;
   height:50px;
+  margin-bottom: 50px;
   
   transform:rotate(45deg);
 }
@@ -519,6 +550,17 @@ h1 > .wrap{
   20.1%,100%{
     border-color: #222;
   }
+}
+/*** side image ****/
+.section-animated{
+  position: relative;
+}
+.peeps{
+  position: absolute;
+  left: -300px;
+  top:100px;
+  transform:scale(1.1);
+  z-index:999999;
 }
 /*** skills css ***/
 .skill{
@@ -791,6 +833,64 @@ h1 > .wrap{
   scrollbar-width: none;
   margin-left: 3%;
   max-height: 52rem;
+  border-top: 1px solid #808d93;
+  border-bottom:1px solid #808d93;
+}
+/*** qualification css **/
+.qualification-tabs{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 4.5rem;
+}
+.qualification-button{
+  font-size: 35px;
+  font-weight: 700;
+  margin-top: 1.4rem;
+  cursor: pointer;
+}
+.qualification-button:hover{
+  color: #4666ac98;
+}
+.study-icon{
+  font-size: 2.9rem;
+  margin-right: 1.2rem;
+
+}
+.qualification-sections{
+  display:flex;
+  justify-content: space-around;
+  margin-bottom: 5rem;
+}
+.qualification-data{
+  margin-bottom: 2rem;
+}
+.qualification-header{
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.qualification-subtitle{
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+.qualification-calendar{
+  color:#8aecdf;
+  font-size:1.1rem;
+}
+.calendar-icon{
+  margin-top: 0;
+  padding-top:0;
+  padding-right: 8px;
+}
+
+
+.qualification-line{
+  display: block;
+  border-left: 2px solid #4666ac98;
+  width:15px;
+  height:auto;
+  opacity:0.55;
+  box-shadow: 1px 1px 5px #222222;
 }
 
 /*** contact css ***/
@@ -906,14 +1006,15 @@ h1 > .wrap{
 }
 /*** footer css ***/
 .footer{
-  padding: 50px 0 50px 0;
+  padding: 50px 0 20px 0;
   background-image: url('./assets/img/footer-bg.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-.footer img{
-  width:30%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .footer p{
   font-weight: 400;
@@ -922,6 +1023,65 @@ h1 > .wrap{
   letter-spacing: 0.5px;
   margin-top: 25px;
 }
+.footer-first{
+  margin-bottom: 40px;
+}
+.footer-logo{
+  font-size: 50px;
+  display: inline-block;
+  font-family: 'M PLUS 1 Code', sans-serif;
+  text-align: center;
+  font-weight:700;
+}
+
+.footer-widget-heading{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.footer-widget-heading h3{
+  font-size:23px;
+  font-weight:600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before{
+  content:'';
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #fff;
+}
+.potion-svg{
+  font-size:25px;
+  margin-left: 6px;
+  margin-bottom: auto;
+  position: absolute;
+  top:-12%; 
+}
+.tools,.all-links{
+  display: flex;
+  font-weight:500;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color:#94dee4;
+  
+}
+.tools span,.all-links a{
+  margin-bottom:0.3rem;
+}
+.all-links a{
+  color: #94dee4;
+}
+
+
+/*** responsive ***/
+
+
 /*
 .App {
   text-align: center;

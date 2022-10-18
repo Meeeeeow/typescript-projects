@@ -1,6 +1,5 @@
 import React , {useState , useEffect} from 'react';
 import { Button , Container, Nav, Navbar  } from 'react-bootstrap';
-import logo from '../assets/img/logo.svg';
 import navLink1 from '../assets/img/nav-icon1.svg';
 import navLink2 from '../assets/img/nav-icon2.svg';
 import navLink3 from '../assets/img/nav-icon3.svg';
@@ -8,6 +7,7 @@ import { HashLink } from 'react-router-hash-link';
 
 const Navbars = () => {
   const [scrolled , setScrolled] = useState<boolean>(false);
+  const [isOpen ,setIsOpen] = useState<boolean>(false);
 
   useEffect(()=>{
     const onScroll = () =>{
@@ -24,13 +24,13 @@ const Navbars = () => {
     }
   },[])
   return (
-    <Navbar expand="md" className={scrolled ? 'scrolled' : ''}>
+    <Navbar expand="xl" className={scrolled ? 'scrolled' : ''}>
     <Container>
       <Navbar.Brand>
         <Nav.Link href="/" className="logo">.Sakib()</Nav.Link>
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="navbarScroll" >
-        <span className='navbar-toggler-icon'></span>
+      <Navbar.Toggle className={`navbar-toggler ${isOpen ? 'open' : ''}`} aria-controls="navbarScroll" onClick={()=> setIsOpen(!isOpen)} >
+        <span className={`navbar-toggler-icon`}></span>
       </Navbar.Toggle>
       <Navbar.Collapse id="navbarScroll">
         <Nav
@@ -39,6 +39,7 @@ const Navbars = () => {
           <Nav.Link href="#home" >.home()</Nav.Link>
           <Nav.Link href="#skills" >.skills()</Nav.Link>
           <Nav.Link href="#projects">.projects()</Nav.Link>
+          <Nav.Link href="#qualification">.journeys()</Nav.Link>
         </Nav>
 
         {/* social media*/}
