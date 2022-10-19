@@ -117,6 +117,7 @@ img{
        	              -8px 7px #8aecdf;
   opacity:0.52;
 }
+
 .title div, .title1 div{
   position: absolute;
   top:50%;
@@ -129,6 +130,7 @@ img{
   font-size: 2.6rem;
   font-weight: 800;
 }
+
 button{
   border:0;
   background-color: transparent;
@@ -352,21 +354,14 @@ span.navbar-text{
  .navbar-toggler.open .navbar-toggler-icon{
   border-color: transparent;
 }
-@media screen and (min-width : 992px) and (max-width: 1200px) {
+/* @media screen and (min-width : 992px) and (max-width: 1200px) {
   nav.navbar .navbar-nav{
     background: transparent;
     border-bottom: 2px solid rgba(20, 236, 218,0.34);
   }
   
-}
-@media  screen and (max-width:1200px) {
-  .navbar-text {
-    display:flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 1.2rem;
-  }
-}
+} */
+
 /*banner css*/
 .banner{
   margin-top:0;
@@ -398,10 +393,11 @@ span.navbar-text{
 }
 .banner .about-me-content .vertical{
   border-left: 2px solid #b8b8b8;
-  height:100px;
+  height:auto;
   margin-top:2.2%;
   margin-left: 3.5%;
   opacity: 0.23;
+  margin-bottom:2.2%;
 }
 .banner .about-me-content .content{
   display: flex;
@@ -428,7 +424,7 @@ span.navbar-text{
 }
 .banner .header-btns{
   display:flex;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
 
 }
 .banner .again-connect{
@@ -483,6 +479,8 @@ span.navbar-text{
 h1 > .wrap{
   border-right: 0.09em solid #666;
 }
+
+
 /***scroll btn***/
 .scroll-btn{
   position: relative;
@@ -678,8 +676,38 @@ h1 > .wrap{
   transform-origin: left;
   animation: animate 1.4s 0.6s cubic-bezier(1, 0, 0.5, 1)  forwards; /*animation name animation duration animation delay animation timing function animation iteration count animation direction animation fill mode animation play state*/
 } 
+/*ui*/
 .skills-bar .skills .progress-bar.js .weight{
   width:85%;
+}
+.skills-bar .skills .progress-bar.react .weight{
+  width:85%;
+}
+.skills-bar .skills .progress-bar.ts .weight{
+  width:70%;
+}
+.skills-bar .skills .progress-bar.HTML .weight{
+  width:90%;
+}
+.skills-bar .skills .progress-bar.CSS .weight{
+  width:90%;
+}
+.skills-bar .skills .progress-bar.mui .weight{
+  width:70%;
+}
+.skills-bar .skills .progress-bar.tailwind .weight{
+  width:80%;
+}
+
+/*backend*/
+.skills-bar .skills .progress-bar.mssql .weight{
+  width:90%;
+}
+.skills-bar .skills .progress-bar.oracle .weight{
+  width:85%;
+}
+.skills-bar .skills .progress-bar.asp .weight{
+  width:65%;
 }
 .skills-bar .skills .progress-bar.python .weight{
   width:80%;
@@ -687,18 +715,24 @@ h1 > .wrap{
 .skills-bar .skills .progress-bar.c .weight{
   width:80%;
 }
-.skills-bar .skills .progress-bar.react .weight{
-  width:85%;
-}
-.skills-bar .skills .progress-bar.ts .weight{
-  width:65%;
-}
-.skills-bar .skills .progress-bar.sql .weight{
-  width:70%;
+
+/*programming*/
+.skills-bar .skills .progress-bar.c-sharp .weight{
+  width:60%;
 }
 .skills-bar .skills .progress-bar.nlp .weight{
   width:75%;
 }
+.skills-bar .skills .progress-bar.python .weight{
+  width:85%;
+}
+.skills-bar .skills .progress-bar.c .weight{
+  width:80%;
+}
+.skills-bar .skills .progress-bar.js .weight{
+  width:85%;
+}
+
 .skills-bar .skills .progress-bar .weight::before{
   position: absolute;
   content:"";
@@ -731,26 +765,55 @@ h1 > .wrap{
       opacity: 1;
     }
 }
+/* UI */
 .skills-bar .skills .progress-bar.js .weight::after{
   content:'85%';
-}
-.skills-bar .skills .progress-bar.python .weight::after{
-  content:'80%';
-}
-.skills-bar .skills .progress-bar.c .weight::after{
-  content:'80%';
 }
 .skills-bar .skills .progress-bar.react .weight::after{
   content:'85%';
 }
 .skills-bar .skills .progress-bar.ts .weight::after{
+  content:'70%';
+}
+.skills-bar .skills .progress-bar.HTML .weight::after{
+  content:'90%';
+}
+.skills-bar .skills .progress-bar.CSS .weight::after{
+  content:'90%';
+}
+.skills-bar .skills .progress-bar.mui .weight::after{
+  content:'70%';
+}
+.skills-bar .skills .progress-bar.tailwind .weight::after{
+  content:'80%';
+}
+
+
+/* backend */
+.skills-bar .skills .progress-bar.mssql .weight::after{
+  content:'90%';
+}
+.skills-bar .skills .progress-bar.oracle .weight::after{
+  content:'85%';
+}
+.skills-bar .skills .progress-bar.asp .weight::after{
   content:'65%';
 }
-.skills-bar .skills .progress-bar.sql .weight::after{
-  content:'70%';
+/*programming*/
+.skills-bar .skills .progress-bar.c-sharp .weight::after{
+  content:'60%';
 }
 .skills-bar .skills .progress-bar.nlp .weight::after{
   content:'75%';
+}
+.skills-bar .skills .progress-bar.c .weight::after{
+  content:'80%';
+}
+.skills-bar .skills .progress-bar.python .weight::after{
+  content:'85%';
+}
+.skills-bar .skills .progress-bar.js .weight::after{
+  content:'85%';
 }
 @keyframes animate {
   100%{
@@ -836,6 +899,7 @@ h1 > .wrap{
   border-top: 1px solid #808d93;
   border-bottom:1px solid #808d93;
 }
+
 /*** qualification css **/
 .qualification-tabs{
   display: flex;
@@ -1080,7 +1144,104 @@ h1 > .wrap{
 
 
 /*** responsive ***/
+@media  screen and (max-width:1200px) {
+  .title>h2,.title1>h2{
+    font-size:4rem;
+  }
+  .title div h2, .title1 div h2{
+    font-size:1.8rem;
+  }
+  .navbar-text {
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1.2rem;
+  }
+  nav.navbar .navbar-nav{
+    background: transparent;
+    border-bottom: 2px solid rgba(20, 236, 218,0.34);
+  }
 
+  /**banner responsive***/
+  .banner{
+    margin-top:0;
+    padding:375px 0 100px 0;
+  }
+  .scroll-btn{
+    margin-left: auto;
+  }
+  .banner .header-btns{
+    margin-bottom: 60px;
+    display:block;
+    width:100%;
+  }
+
+  .project-cards{
+    justify-content: center;
+    
+  }
+  .qualification-line{
+    margin: 0 1.2rem;
+  }
+}
+@media screen and (min-width:768px) and (max-width:990px){
+  .scroll-btn{
+    margin-left: auto;
+  }
+  .top-btn{
+    right:2.5rem;
+  }
+}
+
+@media screen and (max-width:767px) {
+  
+  .banner h1{
+    font-size: 3rem;
+  }
+  .banner .about-me-content{
+    font-size: 1.15rem;
+  }
+  .banner p{
+    font-size: 0.95rem;
+    line-height: 1.9;
+
+  }
+
+  .banner .header-btns{
+    display:block;
+  }
+  .banner .header-btns .again-connect , .banner .header-btns .cv{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+  }
+  .scroll-btn{
+    margin:auto;
+  }
+  .top-btn{
+    right:2.5rem;
+  }
+  .qualification-button{
+    font-size: 27px;
+  }
+  .study-icon{
+    font-size: 1.9rem;
+  }
+  .qualification-header{
+    font-size: 1.4rem;
+  }
+  .qualification-subtitle{
+    font-size: 1.07rem;
+  }
+  .qualification-calendar{
+    font-size: 0.98rem;
+  }
+  .contact form button{
+    width:100%;
+  }
+  
+}
 
 /*
 .App {

@@ -48,17 +48,17 @@ const Skills = () => {
                             <div className = 'skills-list '>
                             <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
                                 <div className={isVisible ? "info" : "info-display-off-page"}>
-                                    Python
+                                    HTML
                                 </div>
-                                <div className={isVisible ? "progress-bar python" : "progress-dsiplay-off-page"}>
+                                <div className={isVisible ? "progress-bar HTML" : "progress-dsiplay-off-page"}>
                                     <span className='weight'></span>
                                 </div>
                             </div>
                             <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
                             <div className={isVisible ? "info" : "info-display-off-page"}>
-                                C++
+                                CSS, SCSS 
                             </div>
-                            <div className={isVisible ? "progress-bar c" : "progress-dsiplay-off-page"}>
+                            <div className={isVisible ? "progress-bar CSS" : "progress-dsiplay-off-page"}>
                                 <span className='weight'></span>
                             </div>
                             </div>
@@ -90,18 +90,18 @@ const Skills = () => {
                             
                             <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
                                 <div className={isVisible ? "info" : "info-display-off-page"}>
-                                    SQL
+                                    Tailwind CSS
                                 </div>
-                                <div className={isVisible ? "progress-bar sql" : "progress-dsiplay-off-page"}>
+                                <div className={isVisible ? "progress-bar tailwind" : "progress-dsiplay-off-page"}>
                                     <span className='weight'></span>
                                 </div>
                             </div>
 
                             <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
                                 <div className={isVisible ? "info" : "info-display-off-page"}>
-                                    {<span>Machine learning</span>}
+                                    {<span>React MUI</span>}
                                 </div>
-                                <div className={isVisible ? "progress-bar nlp" : "progress-dsiplay-off-page"}>
+                                <div className={isVisible ? "progress-bar mui" : "progress-dsiplay-off-page"}>
                                     <span className='weight'></span>
                                 </div>
                             </div>
@@ -124,65 +124,30 @@ const Skills = () => {
                             <span className="arrow-down"><FaAngleDown/></span>
                         </div>
                         <div className = 'skills-list '>
-                        <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
-                            <div className={isVisible ? "info" : "info-display-off-page"}>
-                                Python
+                            <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
+                                <div className={isVisible ? "info" : "info-display-off-page"}>
+                                    MSSQL
+                                </div>
+                                <div className={isVisible ? "progress-bar mssql" : "progress-dsiplay-off-page"}>
+                                    <span className='weight'></span>
+                                </div>
                             </div>
-                            <div className={isVisible ? "progress-bar python" : "progress-dsiplay-off-page"}>
+                            <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
+                            <div className={isVisible ? "info" : "info-display-off-page"}>
+                                Oracle
+                            </div>
+                            <div className={isVisible ? "progress-bar oracle" : "progress-dsiplay-off-page"}>
                                 <span className='weight'></span>
                             </div>
-                        </div>
-                        <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
-                        <div className={isVisible ? "info" : "info-display-off-page"}>
-                            C++
-                        </div>
-                        <div className={isVisible ? "progress-bar c" : "progress-dsiplay-off-page"}>
-                            <span className='weight'></span>
-                        </div>
-                        </div>
-                        <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
-                            <div className={isVisible ? "info" : "info-display-off-page"}>
-                                Javascript
                             </div>
-                            <div className={isVisible ? "progress-bar js": "progress-dsiplay-off-page"}>
-                                <span className='weight'></span>
+                            <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
+                                <div className={isVisible ? "info" : "info-display-off-page"}>
+                                    ASP.NET
+                                </div>
+                                <div className={isVisible ? "progress-bar asp": "progress-dsiplay-off-page"}>
+                                    <span className='weight'></span>
+                                </div>
                             </div>
-                        </div>
-                        <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
-                            <div className={isVisible ? "info" : "info-display-off-page"}>
-                                React
-                            </div>
-                            <div className={isVisible ? "progress-bar react" : "progress-dsiplay-off-page"}>
-                                <span className='weight'></span>
-                            </div>
-                        </div>
-
-                        <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
-                            <div className={isVisible ? "info" : "info-display-off-page"}>
-                                Typescript
-                            </div>
-                            <div className={isVisible ? "progress-bar ts" : "progress-dsiplay-off-page"}>
-                                <span className='weight'></span>
-                            </div>
-                        </div>
-                        
-                        <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
-                            <div className={isVisible ? "info" : "info-display-off-page"}>
-                                SQL
-                            </div>
-                            <div className={isVisible ? "progress-bar sql" : "progress-dsiplay-off-page"}>
-                                <span className='weight'></span>
-                            </div>
-                        </div>
-
-                        <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
-                            <div className={isVisible ? "info" : "info-display-off-page"}>
-                                {<span>Machine learning</span>}
-                            </div>
-                            <div className={isVisible ? "progress-bar nlp" : "progress-dsiplay-off-page"}>
-                                <span className='weight'></span>
-                            </div>
-                        </div>
                         </div>
                 </div>
                 }
@@ -201,65 +166,46 @@ const Skills = () => {
                             <span className="arrow-down"><FaAngleDown/></span>
                         </div>
                         <div className = 'skills-list'>
-                        <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
-                            <div className={isVisible ? "info" : "info-display-off-page"}>
-                                Python
+                            <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
+                                <div className={isVisible ? "info" : "info-display-off-page"}>
+                                    Python
+                                </div>
+                                <div className={isVisible ? "progress-bar python" : "progress-dsiplay-off-page"}>
+                                    <span className='weight'></span>
+                                </div>
                             </div>
-                            <div className={isVisible ? "progress-bar python" : "progress-dsiplay-off-page"}>
+                            <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
+                            <div className={isVisible ? "info" : "info-display-off-page"}>
+                                C++
+                            </div>
+                            <div className={isVisible ? "progress-bar c" : "progress-dsiplay-off-page"}>
                                 <span className='weight'></span>
                             </div>
-                        </div>
-                        <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
-                        <div className={isVisible ? "info" : "info-display-off-page"}>
-                            C++
-                        </div>
-                        <div className={isVisible ? "progress-bar c" : "progress-dsiplay-off-page"}>
-                            <span className='weight'></span>
-                        </div>
-                        </div>
-                        <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
-                            <div className={isVisible ? "info" : "info-display-off-page"}>
-                                Javascript
                             </div>
-                            <div className={isVisible ? "progress-bar js": "progress-dsiplay-off-page"}>
-                                <span className='weight'></span>
+                            <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
+                                <div className={isVisible ? "info" : "info-display-off-page"}>
+                                    Javascript
+                                </div>
+                                <div className={isVisible ? "progress-bar js": "progress-dsiplay-off-page"}>
+                                    <span className='weight'></span>
+                                </div>
                             </div>
-                        </div>
-                        <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
-                            <div className={isVisible ? "info" : "info-display-off-page"}>
-                                React
+                            <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
+                                <div className={isVisible ? "info" : "info-display-off-page"}>
+                                    {<span>Machine learning</span>}
+                                </div>
+                                <div className={isVisible ? "progress-bar nlp" : "progress-dsiplay-off-page"}>
+                                    <span className='weight'></span>
+                                </div>
                             </div>
-                            <div className={isVisible ? "progress-bar react" : "progress-dsiplay-off-page"}>
-                                <span className='weight'></span>
-                            </div>
-                        </div>
-
-                        <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
-                            <div className={isVisible ? "info" : "info-display-off-page"}>
-                                Typescript
-                            </div>
-                            <div className={isVisible ? "progress-bar ts" : "progress-dsiplay-off-page"}>
-                                <span className='weight'></span>
-                            </div>
-                        </div>
-                        
-                        <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
-                            <div className={isVisible ? "info" : "info-display-off-page"}>
-                                SQL
-                            </div>
-                            <div className={isVisible ? "progress-bar sql" : "progress-dsiplay-off-page"}>
-                                <span className='weight'></span>
-                            </div>
-                        </div>
-
-                        <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
-                            <div className={isVisible ? "info" : "info-display-off-page"}>
-                                {<span>Machine learning</span>}
-                            </div>
-                            <div className={isVisible ? "progress-bar nlp" : "progress-dsiplay-off-page"}>
-                                <span className='weight'></span>
-                            </div>
-                        </div>
+                            <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
+                                <div className={isVisible ? "info" : "info-display-off-page"}>
+                                    C#
+                                </div>
+                                <div className={isVisible ? "progress-bar c-sharp" : "progress-dsiplay-off-page"}>
+                                    <span className='weight'></span>
+                                </div>
+                            </div>          
                         </div>
                 </div>
                
