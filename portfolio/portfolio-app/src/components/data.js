@@ -10,27 +10,27 @@ export const ProjectsDetails = [
         github:"https://github.com/Meeeeeow/react-crud/tree/master/redux"
     },
     {
-        id: 1,
-        title: "Monsters Rolodex",
-        category:'react',
-        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
-        skills: ['React', 'Redux', 'Javascript', 'HTML', 'CSS'],
-        description: "A simple React app that fetches data from an API and displays it on the page. The app also allows you to search for monsters by name.Also added sign in and sign up functionality using local storage. Has CRUD functionality.",
-        website:"https://bejewelled-tartufo-03a471.netlify.app/",
-        github:"https://github.com/Meeeeeow/react-crud/tree/master/redux"
-    },
-    {
-        id: 1,
-        title: "Monsters Rolodex",
-        category:'react',
-        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
-        skills: ['React', 'Redux', 'Javascript', 'HTML', 'CSS'],
-        description: "A simple React app that fetches data from an API and displays it on the page. The app also allows you to search for monsters by name.Also added sign in and sign up functionality using local storage. Has CRUD functionality.",
-        website:"https://bejewelled-tartufo-03a471.netlify.app/",
-        github:"https://github.com/Meeeeeow/react-crud/tree/master/redux"
-    },
-    {
         id: 2,
+        title: "Quiz Website",
+        category:'ts',
+        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
+        skills: ['Javascript','React', 'Typecript','Styled Component'],
+        description: "A simple quiz app. 30 questions with mixed difficulty and topic. Data fetched from an api and from that used typescript to build the logics",
+        website:"https://typescript-quiznow.netlify.app/",
+        github:"https://github.com/Meeeeeow/typescript-projects/tree/master/quiz-app"
+    },
+    {
+        id: 3,
+        title: "Check the Cart",
+        category:'ts',
+        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
+        skills: ['Javascript','React', 'Typecript','React-Bootstrap'],
+        description: "Simple shop website mainly focusing the cart functionality with typescript",
+        website:"https://typescript-cart-check.netlify.app/",
+        github:"https://github.com/Meeeeeow/typescript-projects/tree/master/store-app/shopping-store"
+    },
+    {
+        id: 4,
         title: "Keep a Note",
         category:'ts',
         image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
@@ -40,85 +40,117 @@ export const ProjectsDetails = [
         github:"https://github.com/Meeeeeow/typescript-projects/tree/master/notes-app/notes"
     },
     {
-        id: 1,
-        title: "Monsters Rolodex",
+        id: 5,
+        title: "Hangman",
         category:'react',
         image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
-        skills: ['React', 'Redux', 'Javascript', 'HTML', 'CSS'],
-        description: "A simple React app that fetches data from an API and displays it on the page. The app also allows you to search for monsters by name.Also added sign in and sign up functionality using local storage. Has CRUD functionality.",
-        website:"https://bejewelled-tartufo-03a471.netlify.app/",
-        github:"https://github.com/Meeeeeow/react-crud/tree/master/redux"
+        skills: ['React', 'Redux', 'Javascript', 'HTML', 'Tailwind CSS'],
+        description: "The well knwon hangman game with some programming languages.",
+        website:"https://guess-the-language-hangman.netlify.app/",
+        github:"https://github.com/Meeeeeow/refactored-react/tree/master/Hangman/hangman"
     },
     {
-        id: 2,
-        title: "Keep a Note",
-        category:'ts',
-        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
-        skills: ['Javascript','React', 'Typecript', 'React-Bootstrap'],
-        description: "Keep notes of your daily tasks and delete them when done. This app is built using React and Typescript. It uses local storage to store the notes.",
-        website:"https://superb-rabanadas-2418ad.netlify.app/",
-        github:"https://github.com/Meeeeeow/typescript-projects/tree/master/notes-app/notes"
-    },
-    {
-        id: 1,
-        title: "Monsters Rolodex",
+        id: 6,
+        title: "Checkout React",
         category:'react',
         image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
-        skills: ['React', 'Redux', 'Javascript', 'HTML', 'CSS'],
-        description: "A simple React app that fetches data from an API and displays it on the page. The app also allows you to search for monsters by name.Also added sign in and sign up functionality using local storage. Has CRUD functionality.",
-        website:"https://bejewelled-tartufo-03a471.netlify.app/",
-        github:"https://github.com/Meeeeeow/react-crud/tree/master/redux"
+        skills: ['React', 'Redux', 'Javascript', 'HTML', 'Bootstrap'],
+        description: "Simple shop website mainly highlighting the cart feature using react",
+        website:"https://react-shopping-cart-check.netlify.app/",
+        github:"https://github.com/Meeeeeow/refactored-react/tree/master/addToCart"
     },
     {
-        id: 2,
-        title: "Keep a Note",
-        category:'ts',
+        id: 7,
+        title: "Check  Movie Review",
+        category:'react',
         image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
-        skills: ['Javascript','React', 'Typecript', 'React-Bootstrap'],
-        description: "Keep notes of your daily tasks and delete them when done. This app is built using React and Typescript. It uses local storage to store the notes.",
-        website:"https://superb-rabanadas-2418ad.netlify.app/",
-        github:"https://github.com/Meeeeeow/typescript-projects/tree/master/notes-app/notes"
+        skills: ['React', 'Redux-toolkit', 'Javascript', 'HTML', 'SCSS'],
+        description: "Practice using movie api to show and filter movies",
+        website:"",
+        github:"https://github.com/Meeeeeow/refactored-react/tree/master/movie_app"
+    },
+    {
+        id: 8,
+        title: "React wordle",
+        category:'react',
+        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
+        skills: ['React', 'Redux', 'Javascript', 'HTML', 'Bootstrap'],
+        description: "The popular wordle game",
+        website:"https://gleeful-hotteok-37d230.netlify.app/",
+        github:"https://github.com/Meeeeeow/refactored-react/tree/master/redux/react_wordle"
     },
 
     {
-        id: 2,
-        title: "Keep a Note",
-        category:'ts',
+        id: 9,
+        title: "Weather Check",
+        category:'react',
         image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
         skills: ['Javascript','React', 'Typecript', 'React-Bootstrap'],
-        description: "Keep notes of your daily tasks and delete them when done. This app is built using React and Typescript. It uses local storage to store the notes.",
-        website:"https://superb-rabanadas-2418ad.netlify.app/",
-        github:"https://github.com/Meeeeeow/typescript-projects/tree/master/notes-app/notes"
+        description: "Open weather api to check weather",
+        website:"https://weather-check-reacts.netlify.app/",
+        github:"https://github.com/Meeeeeow/refactored-react/tree/master/weather_app"
     },
 
     {
-        id: 2,
-        title: "Keep a Note",
-        category:'ts',
+        id: 10,
+        title: "Rent a Car",
+        category:'asp',
         image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
-        skills: ['Javascript','React', 'Typecript', 'React-Bootstrap'],
-        description: "Keep notes of your daily tasks and delete them when done. This app is built using React and Typescript. It uses local storage to store the notes.",
-        website:"https://superb-rabanadas-2418ad.netlify.app/",
-        github:"https://github.com/Meeeeeow/typescript-projects/tree/master/notes-app/notes"
+        skills: ['C#','Javascript','ASP.Net','Bootstrap','MSSQL'],
+        description: "A Fullstrack Rent  a Car website using asp.net and c#",
+        website:"",
+        github:"https://github.com/Meeeeeow/ISD_SD_3.2"
     },
     {
-        id: 2,
-        title: "Keep a Note",
-        category:'ts',
+        id: 11,
+        title: "Github profiler",
+        category:'web',
         image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
-        skills: ['Javascript','React', 'Typecript', 'React-Bootstrap'],
-        description: "Keep notes of your daily tasks and delete them when done. This app is built using React and Typescript. It uses local storage to store the notes.",
-        website:"https://superb-rabanadas-2418ad.netlify.app/",
-        github:"https://github.com/Meeeeeow/typescript-projects/tree/master/notes-app/notes"
+        skills: ['Javascript','HTML','CSS'],
+        description: "Simple github profile website",
+        website:"",
+        github:"https://github.com/Meeeeeow/Mini-Projects-Front-End/tree/master/Github_App"
     },
     {
-        id: 2,
-        title: "Keep a Note",
-        category:'ts',
+        id: 12,
+        title: "Draw anything!",
+        category:'web',
         image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
-        skills: ['Javascript','React', 'Typecript', 'React-Bootstrap'],
-        description: "Keep notes of your daily tasks and delete them when done. This app is built using React and Typescript. It uses local storage to store the notes.",
-        website:"https://superb-rabanadas-2418ad.netlify.app/",
-        github:"https://github.com/Meeeeeow/typescript-projects/tree/master/notes-app/notes"
+        skills: ['Javascript','HTML','CSS'],
+        description: "Simple drawing website",
+        website:"https://meeeeeow.github.io/Mini-Projects-Front-End/Drawing_App/index.html",
+        github:"https://github.com/Meeeeeow/Mini-Projects-Front-End/tree/master/Drawing_App"
+    },
+    {
+        id: 13,
+        title: "Take a note!",
+        category:'web',
+        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
+        skills: ['Javascript','HTML','CSS'],
+        description: "Take a note website with js and local storage",
+        website:"https://meeeeeow.github.io/Mini-Projects-Front-End/Notes_App/index.html",
+        github:"https://github.com/Meeeeeow/Mini-Projects-Front-End/tree/master/Notes_App"
+    },
+    {
+        id: 14,
+        title: "Machine learning works",
+        category:'python',
+        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
+        skills: ['Python','Colab','ML','NLP','Time series Forecasting','Emotion From Text'],
+        description: "Thesis works during my undergrad",
+        website:"",
+        github:"https://github.com/Meeeeeow/machine-learning"
+    },
+    {
+        id: 15,
+        title: "Illustrations",
+        category:'ps',
+        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
+        skills: ['Photoshop','Illustrator'],
+        description: "illustration I did using tutorials",
+        website:"",
+        github:"https://github.com/Meeeeeow/ps-cc-art"
     }
+
+
 ]

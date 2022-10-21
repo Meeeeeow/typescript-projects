@@ -66,7 +66,7 @@ const Banner = () => {
                                 <span>{htmlOpenTag}</span>
                                 <div className="content">
                                     <span className='vertical'></span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quidem id culpa itaque quam laborum nobis illo magni praesentium, officiis repellat exercitationem distinctio eaque eum quae aut inventore voluptatem. Iusto!</p>
+                                    <p>I live in Dhaka, Bangladesh, a colorful,vibrant city bustling with activities. I like to draw, design and work with AI, time forecast related stuffs. Want to enrich my knowledge more with modern and traditioanl frontend and backend technologies. Like to tell stories, listen to music and sometimes go out on weekends.</p>
                                 </div>
                                 <span>{htmlCloseTag}</span>
                             </div>

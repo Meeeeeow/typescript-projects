@@ -24,7 +24,7 @@ type projectCardProps = {
 const ProjectCard = ({project,clicked}: projectCardProps) => {
   return (
     <motion.div layout transition={{duration:0.6}} initial={{ opacity: 0 }} animate ={{ opacity:1 }}                                                                                                                   >
-        <Card className='cards' sx={{ maxWidth: 400 , height: 330 , position: 'relative', backgroundColor:'#ccffff', color:'#4c7bb9'}} variant="outlined">
+        <Card className='cards' sx={{ width: 400 , height: 330 , position: 'relative', backgroundColor:'#ccffff', color:'#4c7bb9'}} variant="outlined">
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                         {project.title}
@@ -50,9 +50,9 @@ const ProjectCard = ({project,clicked}: projectCardProps) => {
                         bottom: 0,
                         right: 0
                     }}>
-                    <Link href={project.website} target="_blank" rel="noreferrer">
+                    { project.website && (<Link href={project.website} target="_blank" rel="noreferrer">
                         <Button variant = 'contained' size="small" color ='primary' >Live Preview</Button>
-                    </Link>
+                    </Link>)}
 
                     <Link href={project.github} target="_blank" rel="noreferrer">
                         <Button variant = 'outlined' size="small" color ='secondary' endIcon={<GitHubIcon/>}>View in Github</Button>

@@ -45,8 +45,8 @@ const Navbars = () => {
         {/* social media*/}
         <span className='navbar-text'>
           <div className='social-icon'>
-            <a href="#home"><img src={navLink1} alt=""/></a>
-            <a href="#home"><img src={navLink2} alt=""/></a>
+            <a href="https://www.linkedin.com/in/nazmus-sakib-483779229/" target="_blank" rel="noreferrer"><img src={navLink1} alt=""/></a>
+            <a href="https://codeforces.com/profile/Parasyte23" target="_blank" rel="noreferrer"><img src={navLink2} alt=""/></a>
             <a href="#home"><img src={navLink3} alt=""/></a>
           </div>
           <HashLink to='#contacts'>

@@ -10,6 +10,7 @@ import Qualification from './qualification';
 import peep6 from  '../assets/img/peep6.png';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import CursorApp from './cursor';
 
 gsap.registerPlugin(ScrollTrigger);
 function Home() {
@@ -26,7 +27,7 @@ function Home() {
       scrollTrigger:{
        trigger:'#peep', 
        start:'top 50%', 
-       end: '80% 90%',
+       end: '70% 100%',
        scrub : 1,
        markers:true,
       
@@ -47,7 +48,7 @@ function Home() {
        markers:true,
       
       },
-       x:290,
+       x:2290,
        y:-100,
        rotateX:12,
        z:550,
@@ -56,7 +57,7 @@ function Home() {
   },[])
   return (
     <div className='home-section'>
-      
+      <CursorApp/>
       <Navbars/>
       <Banner/>
       <section className="section-animated">

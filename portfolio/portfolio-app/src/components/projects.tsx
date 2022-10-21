@@ -56,7 +56,7 @@ const Projects = () => {
                   <h2>projects</h2>
               </div>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa explicabo magni dolor praesentium accusantium vitae inventore, velit adipisci sequi delectus eos, aperiam in odit, voluptatem laborum deserunt? Aperiam, animi a.</p>
+            <p>Did quite a number of small and medium projects. Here showcased some of my projects</p>
           </Col>
         </Row>
         <Row>

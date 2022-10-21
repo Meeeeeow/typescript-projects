@@ -27,7 +27,7 @@ const Skills = () => {
                   <h2>My Skills</h2>
               </div>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas in ipsa cum repellat optio esse placeat, qui totam, praesentium, facilis nam vel reiciendis rem. Quidem reprehenderit cupiditate rem natus veniam?</p>
+            <p>Graduated early in 2022. Picked up quite a few skills and learned some of the basics of some libraries like Node JS and Next JS. Here showcased some of my skills I am comfortable with </p>
           </Col>
         </Row>
         <Row>
