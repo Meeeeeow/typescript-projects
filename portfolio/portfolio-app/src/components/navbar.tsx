@@ -1,8 +1,8 @@
 import React , {useState , useEffect} from 'react';
 import { Button , Container, Nav, Navbar  } from 'react-bootstrap';
 import navLink1 from '../assets/img/nav-icon1.svg';
-import navLink2 from '../assets/img/nav-icon2.svg';
-import navLink3 from '../assets/img/nav-icon3.svg';
+import navLink2 from '../assets/img/code-forces.svg';
+import navLink3 from '../assets/img/github.svg';
 import { HashLink } from 'react-router-hash-link';
 
 const Navbars = () => {
@@ -47,7 +47,7 @@ const Navbars = () => {
           <div className='social-icon'>
             <a href="https://www.linkedin.com/in/nazmus-sakib-483779229/" target="_blank" rel="noreferrer"><img src={navLink1} alt=""/></a>
             <a href="https://codeforces.com/profile/Parasyte23" target="_blank" rel="noreferrer"><img src={navLink2} alt=""/></a>
-            <a href="#home"><img src={navLink3} alt=""/></a>
+            <a href="https://github.com/Meeeeeow" target="_blank" rel="noreferrer"><img src={navLink3} alt=""/></a>
           </div>
           <HashLink to='#contacts'>
           <Button className='connect' onClick={()=> console.log("Connected")}><span className='connect-text'>.connect()</span></Button>

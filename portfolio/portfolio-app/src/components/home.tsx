@@ -8,9 +8,11 @@ import Contact from './contact';
 import GotoTop from './gotoTop';
 import Qualification from './qualification';
 import peep6 from  '../assets/img/peep6.png';
+import superman from '../assets/img/superman.png';
+import spaceship from '../assets/img/spaceship1.png'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import CursorApp from './cursor';
+// import CursorApp from './cursor';
 
 gsap.registerPlugin(ScrollTrigger);
 function Home() {
@@ -32,44 +34,47 @@ function Home() {
        markers:true,
       
       },
-       x:290,
+       x:250,
        y:-100,
-       rotateX:12,
+       rotateX:10,
        z:550,
-       rotationZ:8,
+       rotationZ:4,
      })
 
      gsap.to('#peepa',{
       scrollTrigger:{
        trigger:'#peepa', 
-       start:'top 50%', 
-       end: '80% 90%',
-       scrub : 1,
+       start:'10% 50%', 
+       end: '100% 80%',
+       scrub : 5,
        markers:true,
       
       },
-       x:2290,
-       y:-100,
+      duration:10,
+       x:3190,
+       y:-500,
        rotateX:12,
+       scale:1.9,
        z:550,
-       rotationZ:8,
+       rotationZ:10,
      })
   },[])
   return (
     <div className='home-section'>
-      <CursorApp/>
+      {/* <CursorApp/> */}
       <Navbars/>
       <Banner/>
       <section className="section-animated">
+      <Skills/>
         <div className="peeps">
           <img src={peep6} alt='peep' id='peep'/>
         </div>
-        <Skills/>
+       
       </section>
       <Projects/>
       <section className='section-animated'>
-          <div className="peeps">
-            <img src={peep6} alt='peep' id='peepa'/>
+          <div className="peeps-spaceship">
+            <img src={spaceship} alt='peep' id='peepa'/>
           </div>
       </section>
       <Qualification/>
