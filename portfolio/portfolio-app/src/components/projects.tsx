@@ -56,12 +56,13 @@ const Projects = () => {
                   <h2>projects</h2>
               </div>
             </div>
-            <p>Did quite a number of small and medium projects. Here showcased some of my projects</p>
+            
           </Col>
         </Row>
         <Row>
           <Col>
             <Container maxWidth="xl" style={{overflow: 'visible'}} className='subcontainer'>
+                <p className='project-header'>Did quite a number of small and medium projects. Here showcased some of my projects</p>
                 <div id='projects' > 
                     <ul className="project-filter">
                         <li className={`list ${clicked === 'all' ? "project-filter-active" : ""}`} onClick={()=>  setClicked('all')}>All</li>

@@ -10,6 +10,7 @@
     background-position-x: center;
     background-size:cover;
     background-clip: padding-box;
+    overflow: hidden;
      /* animation:animatBg 10s linear infinite;  */
     
   }
@@ -206,16 +207,17 @@
     animation-delay: 1.8s;
     animation-duration: 3s;
   }
-  
+  .loading-txt{
+    display: flex;
+    justify-content: center;
+  }
   .loading .text-edit{
     position: absolute;
+    bottom:5%;
     color:#fff;
     font-family: 'Press Start 2P', cursive;
-    left:35%;
-    transform: translate(-35%,0);
-    bottom: 4%;
     animation:animate-text 5s linear infinite;
-    font-size:1.5rem;
+    font-size:1.6rem;
   }
   @keyframes animate-text {
     0%,100%{
@@ -245,92 +247,56 @@
 
   @media screen and (min-width : 992px) and (max-width: 1200px) {
      
-        .rocket img{
-          transform: scale(0.7,0.7);
-        }
+        
 
-        .loading .text-edit{
-           
-            left:27%;
-            transform: translate(-27%,0);
-            bottom: 6%;
-            animation:animate-text 5s linear infinite;
-            font-size:1.2rem;   
-          }
+         .loading .text-edit{
+            font-size:1.4rem;   
+          } 
 
-          .rocket::before{
-            content:'';
-            position: absolute;
-            top:70%;
-            left: 50%;
-            transform: translateX(-50%);
-          }
-          .rocket::after{
-            content:'';
-            position: absolute;
-            top:70%;
-            left: 50%;
-            transform: translateX(-50%);
-          }
+         
       
   }
   @media  screen and (min-width : 600px) and (max-width : 991px){
-    .rocket img{
-      transform:scale(0.45,0.45);
-    }
-    .rocket::before{
-      content:'';
-      position: absolute;
-      top:60%;
-      left: 50%;
-      transform: translateX(-50%);
-      width:15px;
-    }
-    .rocket::after{
-      content:'';
-      position: absolute;
-      top:60%;
-      left: 50%;
-      transform: translateX(-50%);
-      width:25px;
-    }
+   
     .loading .text-edit{
-           
-      left:25%;
-      transform: translate(-25%,0);
-      bottom: 8%;
-      animation:animate-text 5s linear infinite;
-      font-size:1rem;
-    }
+      font-size:1.2rem;
+    } 
 
   }
   @media screen and (max-width:600px) {
-    .rocket img{
-      transform: scale(0.4,0.4);
-    }
-    .loading .text-edit{
-           
-      left:17%;
-      transform: translate(-17%,0);
-      bottom: 14%;
-      animation:animate-text 5s linear infinite;
+
+   .loading .text-edit{
       font-size:0.8rem;
-    
-    }
-    .rocket::before{
-      content:'';
-      position: absolute;
-      top:50%;
-      left: 50%;
-      transform: translateX(-50%);
-      width:10px;
-    }
-    .rocket::after{
-      content:'';
-      position: absolute;
-      top:50%;
-      left: 50%;
-      transform: translateX(-50%);
-      width:15px;
-    }
+      margin-bottom: 7%;
+      
+    } 
+   
+    .rocket img{
+      transform: scale(0.6,0.6);
+  }
+  .rocket::before{
+    content:'';
+    position: absolute;
+    top:60%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    height: 0px;
+    width:20px;
+    background:linear-gradient(#00d0ff,#00d0ff40,transparent);
+    transition: all 2s;
+  }
+  .rocket::after{
+    content:'';
+    position: absolute;
+    top:60%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    height: 0px;
+    width:35px;
+    background:linear-gradient(#00d0ff,#00d0ff40,transparent);
+    filter: blur(25px);
+    transition: all 2s;
+  }
 }

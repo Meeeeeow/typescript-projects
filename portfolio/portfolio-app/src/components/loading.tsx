@@ -21,6 +21,7 @@ const Loading = () => {
     }
 
     useEventListener('keydown',onKeyDown);
+    useEventListener('click',onKeyDown);
 
     const navigate = useNavigate();
     useEffect(() => {
@@ -49,7 +50,9 @@ const Loading = () => {
             <span className='loader'></span>
             <span className='loader'></span>
             <span className='loader'></span>
-            <h3 className='text-edit'>Press any key to continue</h3>
+            <div className="loading-txt">
+                <h3 className='text-edit'>Press any key to continue</h3>
+            </div>
            
         </>
     </section>
