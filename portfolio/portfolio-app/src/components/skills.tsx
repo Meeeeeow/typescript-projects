@@ -6,7 +6,7 @@ import { AiOutlineDatabase } from "react-icons/ai";
 
 import TrackVisibility from 'react-on-screen';
 const Skills = () => {
-    const [trayOpen,setTrayOpen] = useState<boolean>(true);
+    // const [trayOpen,setTrayOpen] = useState<boolean>(true);
     const [panel,setPanel] = useState<string>('panel1');
 
     const changeDisplay = (panels : string) =>{
@@ -187,14 +187,6 @@ const Skills = () => {
                                     Javascript
                                 </div>
                                 <div className={isVisible ? "progress-bar js": "progress-dsiplay-off-page"}>
-                                    <span className='weight'></span>
-                                </div>
-                            </div>
-                            <div className={isVisible ? 'skills' : "skills-dispaly-off-page"}>
-                                <div className={isVisible ? "info" : "info-display-off-page"}>
-                                    {<span>Machine learning</span>}
-                                </div>
-                                <div className={isVisible ? "progress-bar nlp" : "progress-dsiplay-off-page"}>
                                     <span className='weight'></span>
                                 </div>
                             </div>

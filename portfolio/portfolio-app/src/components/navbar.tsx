@@ -27,7 +27,7 @@ const Navbars = () => {
     <Navbar expand="xl" className={scrolled ? 'scrolled' : ''}>
     <Container>
       <Navbar.Brand>
-        <Nav.Link href="/" className="logo">.Sakib()</Nav.Link>
+        <Nav.Link href="#home" className="logo">.Sakib()</Nav.Link>
       </Navbar.Brand>
       <Navbar.Toggle className={`navbar-toggler ${isOpen ? 'open' : ''}`} aria-controls="navbarScroll" onClick={()=> setIsOpen(!isOpen)} >
         <span className={`navbar-toggler-icon`}></span>

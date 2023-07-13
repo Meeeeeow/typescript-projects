@@ -64,7 +64,7 @@ export const ProjectsDetails = [
         title: "Check  Movie Review",
         category:'react',
         image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
-        skills: ['React', 'Redux-toolkit', 'Javascript', 'HTML', 'SCSS'],
+        skills: ['React', 'Redux-toolkit', 'Javascript', 'HTML', 'SCSS','Context API'],
         description: "Practice using movie api to show and filter movies",
         website:"",
         github:"https://github.com/Meeeeeow/refactored-react/tree/master/movie_app"
@@ -150,7 +150,66 @@ export const ProjectsDetails = [
         description: "illustration I did using tutorials",
         website:"",
         github:"https://github.com/Meeeeeow/ps-cc-art"
-    }
-
+    },
+    {
+        id: 16,
+        title: "Clothing Sanctuary Website",
+        category:'react',
+        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
+        skills: ['HTML','SCSS','Javascript', 'React', 'Redux', 'Stripe', 'Firebase', 'Firestore'],
+        description: "E-commerce based clothing website with stripe integration",
+        website:"https://clothing-sanctuary.netlify.app/",
+        github:"https://github.com/Meeeeeow/refactored-react/tree/master/cloth_e-commerce"
+    },
+    {
+        id: 17,
+        title: "Youtube Clone",
+        category:'ts',
+        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
+        skills: ['Javascript', 'Typescript', 'React MUI', 'Rapid API'],
+        description: "Youtube clone",
+        website:"https://youclonevideos.netlify.app/",
+        github:"https://github.com/Meeeeeow/refactored-react/tree/master/youtubeClone/youtube_clone"
+    },
+    {
+        id: 18,
+        title: "MarketPlace Nft",
+        category:'react',
+        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
+        skills: ['Javascript', 'React', 'React MUI', 'Figma'],
+        description: "MarketPlace NFT website build From Figma design",
+        website:"https://marvelous-pastelito-9fc26a.netlify.app/",
+        github:"https://github.com/Meeeeeow/refactored-react/tree/master/marketplace"
+    },
+    {
+        id: 19,
+        title: "CRUD Operation",
+        category:'react',
+        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
+        skills: ['Javascript', 'React', 'Tailwind CSS', 'JSON placeholer API'],
+        description: "Simple CRUD operation with React",
+        website:"https://bucolic-starburst-8de5cf.netlify.app/",
+        github:"https://github.com/Meeeeeow/refactored-react/tree/master/react_crud/react-crud"
+    },
+    {
+        id: 20,
+        title: "Todo with react DnD",
+        category:'react',
+        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
+        skills: ['Javascript', 'React','Redux', 'SCSS', 'React Beautiful DnD'],
+        description: "Todo with beautiful DnD and Redux",
+        website:"https://lively-snickerdoodle-5ff656.netlify.app/",
+        github:"https://github.com/Meeeeeow/refactored-react/tree/master/redux_todo_version2/todo"
+    },
+    {
+        id: 21,
+        title: "Portfolio Website",
+        category:'ts',
+        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
+        skills: ['Javascript', 'Typescript', 'CSS', 'GSAP','React Bootstrap'],
+        description: "My portfolio website",
+        website:"https://lively-snickerdoodle-5ff656.netlify.app/",
+        github:"https://github.com/Meeeeeow/typescript-projects/tree/master/portfolio/portfolio-app"
+    },
 
 ]

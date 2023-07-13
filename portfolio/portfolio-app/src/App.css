@@ -26,7 +26,6 @@ html{
 }
 body{
   font-weight: 400;
-  
   position: relative;
   background-color: #121212 !important;
   color: #fff !important;
@@ -35,6 +34,10 @@ body{
 }
 html{
   scrollbar-width: none;
+
+}
+html::-webkit-scrollbar{
+  display:none;
 }
 h1, h2, h3, h4, h5, h6{
   margin:0;
@@ -47,6 +50,9 @@ p, a, li, ul{
   line-height: normal;
   text-decoration: none;
   list-style: none;
+}
+a{
+  text-decoration: none;
 }
 a:hover{
   text-decoration: none;
@@ -560,6 +566,11 @@ h1 > .wrap{
 .section-animated{
   position: relative;
 }
+.section-animated-space{
+  position: relative;
+  width:100%;
+}
+
 .peeps{
   position: absolute;
   left: -320px;
@@ -569,8 +580,9 @@ h1 > .wrap{
 }
 .peeps-spaceship{
   position: absolute;
-  left: -500px;
-  transform:scale(0.8);
+  left: -450px;
+  top:50px;
+  transform:scale(1.1);
   z-index:999999;
 }
 /*** skills css ***/
@@ -722,19 +734,10 @@ h1 > .wrap{
 .skills-bar .skills .progress-bar.asp .weight{
   width:65%;
 }
-.skills-bar .skills .progress-bar.python .weight{
-  width:80%;
-}
-.skills-bar .skills .progress-bar.c .weight{
-  width:80%;
-}
 
 /*programming*/
 .skills-bar .skills .progress-bar.c-sharp .weight{
-  width:60%;
-}
-.skills-bar .skills .progress-bar.nlp .weight{
-  width:75%;
+  width:65%;
 }
 .skills-bar .skills .progress-bar.python .weight{
   width:85%;
@@ -810,14 +813,11 @@ h1 > .wrap{
   content:'85%';
 }
 .skills-bar .skills .progress-bar.asp .weight::after{
-  content:'65%';
+  content:'70%';
 }
 /*programming*/
 .skills-bar .skills .progress-bar.c-sharp .weight::after{
-  content:'60%';
-}
-.skills-bar .skills .progress-bar.nlp .weight::after{
-  content:'75%';
+  content:'65%';
 }
 .skills-bar .skills .progress-bar.c .weight::after{
   content:'80%';
@@ -847,7 +847,7 @@ h1 > .wrap{
   display:flex;
   flex-direction: column;
   margin: 0;
-  overflow: visible;
+  overflow: hidden;
   padding:60px 0;
   position: relative;
   background-color: #000;
@@ -897,17 +897,26 @@ h1 > .wrap{
   margin: 20px;
   box-shadow: 1px 1px 18px #ccc;
 }
+.project-card .MuiTypography-body2 h5{
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
 .background-img{
   position: absolute;
+  object-fit: cover;
   bottom: -10%;
   width:40%;
   right:-16%;
-  z-index: 1;
+  z-index: 2;
   opacity:0.45;
   transform: rotate(35deg) skew(15deg) skewY(-25deg);
+
 }
 
 /**project card**/
+.project-card a{
+  text-decoration: none;
+}
 .project-cards{
   display:flex;
   flex-wrap: wrap;
@@ -918,6 +927,9 @@ h1 > .wrap{
   max-height: 52rem;
   border-top: 1px solid #808d93;
   border-bottom:1px solid #808d93;
+}
+.project-cards::-webkit-scrollbar{
+  display:none;
 }
 
 /*** qualification css **/
@@ -930,10 +942,6 @@ h1 > .wrap{
   font-size: 35px;
   font-weight: 700;
   margin-top: 1.4rem;
-  cursor: pointer;
-}
-.qualification-button:hover{
-  color: #4666ac98;
 }
 .study-icon{
   font-size: 2.9rem;
@@ -981,6 +989,7 @@ h1 > .wrap{
 .contact{
   background: url("./assets/img/space1.webp");
   background-size: cover;
+  
   padding:60px 0 200px 0;
   color:rgb(208, 228, 233);
 }
@@ -1297,6 +1306,65 @@ h1 > .wrap{
   }
   .project-filter li{
     font-size: 0.85rem;
+  }
+  .project-card a{
+      text-decoration: none;
+  }
+  .top-btn{
+    right:2.5rem;
+  }
+  .qualification-button{
+    font-size: 20px;
+  }
+  .study-icon{
+    font-size: 1.5rem;
+  }
+  .qualification-header{
+    font-size: 1.2rem;
+  }
+  .qualification-subtitle{
+    font-size: 0.85rem;
+  }
+  .qualification-calendar{
+    font-size: 0.9rem;
+  }
+  .contact .intro{
+    font-size: 25px;
+  }
+  .contact form input, .contact form textarea{
+    font-size: 0.85rem;
+  }
+  .contact form button{
+    width:100%;
+  }
+
+  .footer3{
+      margin-top: 0px;
+  }
+  
+}
+@media screen and (max-width : 468px) {
+  .project .project-header{
+    font-size: 0.77rem;
+  }
+  .project-card .MuiPaper-root{
+    width:300px;
+    height:330px;
+  }
+  .project-card .MuiTypography-h5{
+    font-size:1.4rem;
+  }
+  .project-card .MuiTypography-body2{
+    font-size:0.85rem;
+    margin-bottom: 25px;
+  }
+  .project-card .MuiTypography-body2 h5{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  .project-filter li{
+    font-size: 0.75rem;
+    display: block;
   }
   .project-card a{
       text-decoration: none;

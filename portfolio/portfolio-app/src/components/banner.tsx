@@ -48,7 +48,7 @@ const Banner = () => {
     }
     const saveFile =()=>{
         FileSaver.saveAs(
-            process.env.PUBLIC_URL + '/Nazmus_sakib_current_cv.pdf',
+            process.env.PUBLIC_URL + '/Nazmus_sakib_cv.pdf',
             "Nazmus Sakib cv.pdf"
         );
     }

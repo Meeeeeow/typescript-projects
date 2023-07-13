@@ -7,10 +7,9 @@ import Footer from './footer';
 import Contact from './contact';
 import GotoTop from './gotoTop';
 import Qualification from './qualification';
-import peep6 from  '../assets/img/peep6.png';
+import pika from  '../assets/img/pika1.png';
 import peep7 from  '../assets/img/peep7.png';
-import superman from '../assets/img/superman.png';
-import spaceship from '../assets/img/spaceship1.png'
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import CursorApp from './cursor';
@@ -43,17 +42,15 @@ function Home() {
      gsap.to('#peepa',{
       scrollTrigger:{
        trigger:'#peepa', 
-       start:'10% 50%', 
-       end: '100% 80%',
-       scrub : 5,
+       start:'10% 52%', 
+       end: '100% 90%',
+       scrub : 2,
       },
-      duration:10,
-       x:3190,
-       y:-500,
-       rotateX:12,
-       scale:1.9,
-       z:550,
-       rotationZ:10,
+       x:217,
+       y:-110,
+       rotationX:6,
+       z:750,
+       rotationZ:2,
      })
   },[])
   return (
@@ -69,9 +66,9 @@ function Home() {
        
       </section>
       <Projects/>
-      <section className='section-animated'>
+      <section className='section-animated-space'>
           <div className="peeps-spaceship">
-            <img src={spaceship} alt='peep' id='peepa'/>
+            <img src={pika} alt='peep' id='peepa'/>
           </div>
       </section>
       <Qualification/>
