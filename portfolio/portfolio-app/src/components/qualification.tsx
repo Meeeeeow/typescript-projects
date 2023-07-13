@@ -35,7 +35,21 @@ const Qualification = () => {
                 {/* qualification1  */}
                 <div className="qualification-data">
                     <div className = 'qualifcation-desc'>
-                        <h3 className="qualification-header">Computer Science and Engineering</h3>
+                        <h3 className="qualification-header">MSc inComputer Science and Engineering</h3>
+                        <span className="qualification-subtitle">Bangladesh University of Engineering and Technology</span>
+                        <div className="qualification-calendar">
+                            <span className="calendar-icon">
+                                <GoCalendar/> 
+                            </span>
+                            2023 - Present
+                        </div>
+                    </div>
+
+                   
+                </div>
+                <div className="qualification-data">
+                    <div className = 'qualifcation-desc'>
+                        <h3 className="qualification-header">BSc in Computer Science and Engineering</h3>
                         <span className="qualification-subtitle">Ahsanullah University of Science and Technology</span>
                         <div className="qualification-calendar">
                             <span className="calendar-icon">
@@ -96,6 +110,16 @@ const Qualification = () => {
                                 <GoCalendar/> 
                             </span>
                             2022 - Current
+                        </div>
+                    </div>
+                    <div className = 'qualifcation-desc' style={{marginTop:'30px'}}>
+                        <h3 className="qualification-header">Part-time Frontend Developer</h3>
+                        <span className="qualification-subtitle">BiznextIT</span>
+                        <div className="qualification-calendar">
+                            <span className="calendar-icon">
+                                <GoCalendar/> 
+                            </span>
+                            April 2023 - Jun 2023
                         </div>
                     </div>
 

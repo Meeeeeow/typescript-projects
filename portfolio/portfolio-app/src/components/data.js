@@ -156,7 +156,7 @@ export const ProjectsDetails = [
         title: "Clothing Sanctuary Website",
         category:'react',
         image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
-        skills: ['HTML','SCSS','Javascript', 'React', 'Redux', 'Stripe', 'Firebase', 'Firestore'],
+        skills: ['HTML','SCSS','Javascript', 'React', 'Redux', 'Stripe', 'Firebase'],
         description: "E-commerce based clothing website with stripe integration",
         website:"https://clothing-sanctuary.netlify.app/",
         github:"https://github.com/Meeeeeow/refactored-react/tree/master/cloth_e-commerce"
@@ -200,16 +200,5 @@ export const ProjectsDetails = [
         description: "Todo with beautiful DnD and Redux",
         website:"https://lively-snickerdoodle-5ff656.netlify.app/",
         github:"https://github.com/Meeeeeow/refactored-react/tree/master/redux_todo_version2/todo"
-    },
-    {
-        id: 21,
-        title: "Portfolio Website",
-        category:'ts',
-        image: "https://attackofthefanboy.com/wp-content/uploads/2022/07/Naruto-Watch-Order-1.jpg",
-        skills: ['Javascript', 'Typescript', 'CSS', 'GSAP','React Bootstrap'],
-        description: "My portfolio website",
-        website:"https://lively-snickerdoodle-5ff656.netlify.app/",
-        github:"https://github.com/Meeeeeow/typescript-projects/tree/master/portfolio/portfolio-app"
-    },
-
+    }
 ]
