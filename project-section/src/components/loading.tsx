@@ -1,7 +1,12 @@
 import React,{useState , useEffect} from 'react'
 import { useEventListener } from 'usehooks-ts';
 import { useNavigate } from "react-router-dom";
+import space from '../assests/img/rocket1.png';
+import './loadking.css';
 const Loading = () => {
+    const styles ={
+        overflow: 'hidden'
+    }
     const [keyPressed,setKeyPressed] = useState<boolean>(false);
     console.log(keyPressed);
     useEffect(() =>{
@@ -23,13 +28,18 @@ const Loading = () => {
         if(keyPressed){
            setTimeout(() => {
                 navigate('/projects');
-           },6000);
+           },8000);
         }
     },[keyPressed,navigate]);
 
   return (
-    <section className={`${keyPressed ? 'load-after' : 'loading'}`}>
+    <section className={`loading ${keyPressed ? 'load-alter' : ''}`} style={styles}>
         <>
+            <div className={`container ${keyPressed ? 'active' : ''}`}>
+                <div className="rocket">
+                    <img src={space} alt="rocket"></img>
+                </div>
+            </div>
             <span className='loader'></span>
             <span className='loader'></span>
             <span className='loader'></span>

@@ -3,6 +3,8 @@ import React,{useState, useEffect} from 'react'
 import { ProjectsDetails } from './data';
 import ProjectCard from './projectCard';
 import {motion} from 'framer-motion';
+import './projects.css';
+
 type projectSingle ={
   id: number,
   title: string,
@@ -14,6 +16,7 @@ type projectSingle ={
   github: string
 }
 const Projects = () => {
+  
     const [clicked,setClicked] = useState<string>('all');
     const [allProjects,setAllProjects] = useState<projectSingle[]>(ProjectsDetails);
     const [filteredProjects,setFilteredProjects] = useState<projectSingle[]>(ProjectsDetails);
@@ -43,8 +46,8 @@ const Projects = () => {
       
     // }
   return (
-    <Container maxWidth="xl">
-        <div id='projects'> 
+    <Container maxWidth="xl" style={{overflow: 'visible'}}>
+        <div id='projects' > 
         <div className="project-heading">
             <h2>Let's see my work!</h2>
             <h3>My projects</h3>
@@ -59,7 +62,7 @@ const Projects = () => {
             <li className={`list ${clicked === 'ts' ? "project-filter-active" : ""}`} onClick={()=>  setClicked('ts')}>Typescript</li>
             <li className={`list ${clicked === 'ps' ? "project-filter-active" : ""}`} onClick={()=> setClicked('ps')}>Photoshop</li>
         </ul>
-        <motion.div layout transition={{duration:1}} initial={{ opacity: 0 }} animate ={{ opacity:1 }} className = 'projects'>
+        <motion.div layout transition={{duration:0.6}} initial={{ opacity: 0 }} animate ={{ opacity:1 }} className = 'projects'>
         {
             filteredProjects.map((project : projectSingle ,index : number) => (
                 <div className="project-card" key={index}>

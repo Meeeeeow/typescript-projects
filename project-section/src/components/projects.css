@@ -1,0 +1,51 @@
+#projects{
+    display:flex;
+    flex-direction: column;
+    margin:50px 0;
+    overflow: visible;
+  }
+  .project-heading{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-heading h3{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color:#222222;
+  }
+  .project-filter{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(237,237,237,0.6);
+    flex-wrap: wrap;
+    margin:20px;
+  }
+  .project-filter li{
+    margin: 10px;
+    padding: 5px 20px;
+    color:#9b9b9b;
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+    font-weight: 400;
+    cursor:pointer;
+    user-select: none;
+    background-color: #222222;
+  }
+  .project-filter-active{
+    background-color: #f0f0f0;
+    color:#222222;
+  }
+  .projects{
+    display:flex;
+    flex-wrap: wrap;
+    
+  }
+  .project-card{
+    margin: 20px;
+  }
+  

@@ -23,7 +23,7 @@ type projectCardProps = {
 }
 const ProjectCard = ({project,clicked}: projectCardProps) => {
   return (
-    <motion.div layout transition={{duration:1}} initial={{ opacity: 0 }} animate ={{ opacity:1 }}>
+    <motion.div layout transition={{duration:0.6}} initial={{ opacity: 0 }} animate ={{ opacity:1 }}                                                                                                                   >
         <Card sx={{ maxWidth: 400 , height: 330 , position: 'relative'}} variant="outlined">
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">

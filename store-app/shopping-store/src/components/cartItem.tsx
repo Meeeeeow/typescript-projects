@@ -28,7 +28,7 @@ const CartItem = ({id , quantity} : CartItemProps) => {
               <div className='ms-auto'>
                 {formatCurrency(item.price * quantity)}
               </div>
-              <Button variant="outline-danger" size ="sm" onClick ={() => removeFromCart(id)}>&times;</Button>
+              <Button variant="outline-danger" size ="sm" onClick ={() => removeFromCart(item.id)}>&times;</Button>
               
           </Stack>
   )

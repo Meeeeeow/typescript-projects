@@ -1,0 +1,241 @@
+.loading{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background: url('../assests/img/space6.jpg');
+    background-position-x: center;
+    background-size:cover;
+    background-clip: padding-box;
+    /* animation:animatBg 10s linear infinite; */
+    overflow: hidden !important;
+  }
+  .container{
+    position: absolute;
+    bottom:5%;
+    left: 52.5%;
+    transform: translateX(-50%);
+    transition:all 9s;
+    
+  }
+  .rocket img{
+    z-index:999;
+    width:100%;
+    height: 250px;
+    object-fit: cover;
+    transform: scale(0.8,0.8);
+  }
+  .rocket::before{
+    content:'';
+    position: absolute;
+    top:80%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    height: 0px;
+    width:20px;
+    background:linear-gradient(#00d0ff,#00d0ff40,transparent);
+    transition: all 2s;
+  }
+  .rocket::after{
+    content:'';
+    position: absolute;
+    top:80%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    height: 0px;
+    width:35px;
+    background:linear-gradient(#00d0ff,#00d0ff40,transparent);
+    filter: blur(25px);
+    transition: all 2s;
+  }
+
+  .container.active{
+    bottom:200%;
+  }
+
+  .container.active .rocket{
+    animation:movement 0.2s ease infinite;
+  }
+  @keyframes movement{
+    0%,100%{
+      transform: translateY(-3px);
+    }
+    50%{
+      transform: translateY(3px);
+    }
+  }
+  .container.active .rocket::before{
+    height: 200px;
+  }
+  .container.active .rocket::after{
+    height: 400px;
+  }
+
+  /* @keyframes animatBg{
+    0%,100%{
+      transform:scale(1);
+    }
+    50%{
+      transform:scale(1.05);
+    }
+  } */
+  
+  .loader{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width:4px;
+    height:4px;
+    background:#fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255,255,255,0.1),
+    0 0 0 8px rgba(255,255,255,0.1),
+    0 0 20px rgba(255,255,255,1);
+    animation:animate 3s linear infinite;
+    z-index: 9999;
+  }
+  
+  .loader::before{
+    content:'';
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width:300px;
+    height:1px;
+    background: linear-gradient(90deg, #fff,transparent);
+  }
+  
+  @keyframes animate {
+    0%{
+      transform: rotate(325deg) translateX(0);
+      opacity:1;
+    }
+    75%{
+      opacity: 1;
+    }
+    100%{
+      transform: rotate(325deg) translateX(-1000px);
+      opacity:0;
+    }
+  }
+  
+  .loader:nth-child(1)
+  {
+    top:200px;
+    right:0;
+    left:initial;
+    animation-delay: 0;
+    animation-duration: 1s;
+  }
+  .loader:nth-child(2)
+  {
+    top:0;
+    right:80px;
+    left:initial;
+    animation-delay: 0.2s;
+    animation-duration: 3s;
+  }
+  
+  .loader:nth-child(3)
+  {
+    top:90px;
+    right:0;
+    left:initial;
+    animation-delay: 0.4s;
+    animation-duration: 2s;
+  }
+  .loader:nth-child(4)
+  {
+    top:0px;
+    right:180px;
+    left:initial;
+    animation-delay: 0.6s;
+    animation-duration: 1.5s;
+  }
+  .loader:nth-child(5)
+  {
+    top:0;
+    right:400px;
+    left:initial;
+    animation-delay: 0.8s;
+    animation-duration: 2.5s;
+  }
+  
+  .loader:nth-child(6)
+  {
+    top:0;
+    right:600px;
+    left:initial;
+    animation-delay: 1.4s;
+    animation-duration: 3s;
+  }
+  .loader:nth-child(7)
+  {
+    top:300px;
+    right:0;
+    left:initial;
+    animation-delay: 1.4s;
+    animation-duration: 1.7s;
+  }
+  .loader:nth-child(8)
+  {
+    top:0px;
+    right:700px;
+    left:initial;
+    animation-delay: 1.8s;
+    animation-duration: 1.23s;
+  }
+  .loader:nth-child(9)
+  {
+    top:0px;
+    right:1000px;
+    left:initial;
+    animation-delay: 1.17s;
+    animation-duration: 2.3s;
+  }
+  .loader:nth-child(10)
+  {
+    top:350px;
+    right:-10px;
+    left:initial;
+    animation-delay: 1.8s;
+    animation-duration: 3s;
+  }
+  
+  .loading .text-edit{
+    display: block;
+    color:#fff;
+    position: absolute;
+    left:47%;
+    bottom:5%;
+    transform: translate(-50%,0);
+    animation:animate-text 5s linear infinite;
+  }
+  @keyframes animate-text {
+    0%,100%{
+      transform: scale(1);
+    }
+    20%{
+      opacity:0;
+      transform: scale(1);
+    }
+    40%{
+      opacity:1;
+      transform: scale(1.05);
+    }
+    60%{
+      opacity:0;
+      transform: scale(1);
+    }
+    80%{
+      opacity:1;
+      transform: scale(1.05);
+    }
+    
+  }
+  .load-alter .text-edit{
+    display:none;
+  }
