@@ -6,6 +6,10 @@ import PersonList from "./components/PersonList";
 import Status from "./components/Status";
 import Heading from "./components/Heading";
 import HeadingReact from "./components/HeadingReact";
+import Button from "./components/Button";
+import Input from "./components/Input";
+import Container from "./components/Container";
+import User from "./components/User";
 
 function App() {
   const personName = {
@@ -22,6 +26,13 @@ function App() {
       last: "Kent",
     },
   ];
+
+  const handleClick = (
+    event: React.MouseEvent<HTMLButtonElement>,
+    message: string
+  ) => {
+    console.log("Button Clicked", event, message);
+  };
   return (
     <div className="App">
       <Greet name="Rahim" msgCounts={10} isAuth={false} />
@@ -33,6 +44,19 @@ function App() {
       <HeadingReact>
         <Heading> This is passing react component as props to children</Heading>
       </HeadingReact>
+      <Button handleClick={handleClick} />
+      <Input
+        value="abc"
+        handleChange={(event, id) => console.log("Changed", event, id)}
+      />
+      <Container
+        styles={{
+          border: "1px solid black",
+          padding: "1rem",
+          margin: "20px 10px",
+        }}
+      />
+      <User />
     </div>
   );
 }
